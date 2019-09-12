@@ -1,7 +1,7 @@
 <!-- markdownlint-disable MD033 -->
 # blog-gatsby-casper
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/683af5dd-555c-4548-872d-50aecee99a28/deploy-status)](https://app.netlify.com/sites/stupefied-einstein-c01922/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/683af5dd-555c-4548-872d-50aecee99a28/deploy-status)](https://app.netlify.com/sites/bobbywibowo/deploys)
 
 This was based on Gatsby v2 fork of [gatsby-starter-casper](https://github.com/haysclark/gatsby-starter-casper) by [@haysclark](https://github.com/haysclark).  
 The upgrade to v2 was mostly done by [@hnspn](https://github.com/hnspn) with a little help from the folks at [GatsbyCentral](https://www.gatsbycentral.com/).
