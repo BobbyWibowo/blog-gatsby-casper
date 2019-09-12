@@ -16,7 +16,7 @@ const ReadNextStory = props => {
       <Link className={classes} style={styles} to={path}>
         <section className="post">
           <h2>{title}</h2>
-          <p>{excerpt}</p>
+          <p>{excerpt.replace(/ , /g, ', ')}</p>
         </section>
       </Link>
     )

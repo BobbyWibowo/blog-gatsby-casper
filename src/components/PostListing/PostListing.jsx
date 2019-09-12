@@ -34,9 +34,10 @@ class PostListing extends React.Component {
       <div>
         {/* This is the post loop - each post will be output using this markup */}
         {postList.map(post => {
-          const { title, path, excerpt, author, tags, date } = post
+          const { title, path, author, tags, date } = post
           const className = post.post_class ? post.post_class : 'post'
 
+          const excerpt = post.excerpt.replace(/ ,/g, ',')
           const readMore = excerpt.endsWith('…')
             ? <Link className="read-more" to={path}>[&hellip;]</Link>
             : ''

@@ -18,15 +18,13 @@
    13. Media Queries - Smaller than 500px
    ========================================================================== */
 
-/*
 @media only screen and (max-width: 500px) {
     .post-footer .share {
         position: static;
-        width: auto;
+        width: auto
     }
 
     .post-footer .share a {
-        margin: 1.4rem 0.8rem 0;
+        margin: 1.4rem 0.8rem 0
     }
 }
-*/
