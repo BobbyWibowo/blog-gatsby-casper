@@ -13,3 +13,7 @@ indent_size = 4
 [*.{md,mdx}]
 indent_size = 2
 trim_trailing_whitespace = false
+
+[./.vscode/settings.json]
+indent_size = 4
+insert_final_newline = false
