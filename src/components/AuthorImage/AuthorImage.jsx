@@ -3,7 +3,11 @@ import './AuthorImage.css'
 
 class AuthorImage extends React.Component {
   render () {
-    const { name, image, url } = this.props.author
+    const { name, thumb114, url } = this.props.author
+    const lookup = ['thumb24', 'thumb68', 'thumb114', 'image']
+    const image = this.props.author[lookup.find(key => {
+      return Object.prototype.hasOwnProperty.call(this.props.author, key)
+    })]
     if (image)
       return (
         <figure className="author-image">
