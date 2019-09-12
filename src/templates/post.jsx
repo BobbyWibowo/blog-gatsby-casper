@@ -121,13 +121,6 @@ class PostTemplate extends React.Component {
                   <MDXRenderer>{postNode.body}</MDXRenderer>
                 </section>
 
-                {/*
-                <section
-                  className="post-content"
-                  dangerouslySetInnerHTML={{ __html: postNode.html }}
-                />
-                */}
-
                 <PostFooter>
                   <AuthorImage author={authorData} />
                   <AuthorInfo prefix="/author" author={authorData} />
@@ -137,7 +130,7 @@ class PostTemplate extends React.Component {
                     config={config}
                   />
                   <GhostSubscribe />
-                  <Disqus postNode={postNode} />
+                  {process.env.NODE_ENV === 'development' ? '' : <Disqus postNode={postNode} />}
                 </PostFooter>
               </PostFormatting>
             </MainContent>
