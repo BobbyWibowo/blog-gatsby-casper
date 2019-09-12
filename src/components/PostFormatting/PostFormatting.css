@@ -5,8 +5,8 @@
     max-width: 710px;
     margin: 4rem auto;
     padding-bottom: 4rem;
-    border-bottom: #ebf2f6 1px solid;
-    word-wrap: break-word;
+    border-bottom: #bdc3c7 1px solid;
+    word-wrap: break-word
 }
 
 /* Add a little circle in the middle of the border-bottom on our .post
@@ -16,42 +16,41 @@
     content: "";
     width: 7px;
     height: 7px;
-    border: #e7eef2 1px solid;
+    border: #232629 1px solid;
     position: absolute;
     bottom: -5px;
     left: 50%;
     margin-left: -5px;
-    background: #fff;
-    border-radius: 100%;
-    box-shadow: #fff 0 0 0 5px;
+    background: #bdc3c7;
+    border-radius: 100%
 }
 
 .post-title a {
-    text-decoration: none;
-}
-
-/* Possibly not the right home for this, make sure to move sized versions as well */
-h1:not(.post-template) .post-title {
-    font-size: 3.6rem;
-}
-
-div.page-template .post-title {
-    font-size: 5rem;
+    text-decoration: none
 }
 
 .post-template .post-title,
 .page-template .post-title {
-    margin-bottom: 0;
+    margin-bottom: 0
+}
+
+/* Possibly not the right home for this, make sure to move sized versions as well */
+h1:not(.post-template) .post-title {
+    font-size: 3.6rem
+}
+
+div.page-template .post-title {
+    font-size: 5rem
 }
 
 .post-excerpt p {
     margin: 0;
     font-size: 0.9em;
-    line-height: 1.7em;
+    line-height: 1.7em
 }
 
 .read-more {
-    text-decoration: none;
+    text-decoration: none
 }
 
 .post-meta {
@@ -60,43 +59,43 @@ div.page-template .post-title {
     font-family: "Open Sans", sans-serif;
     font-size: 1.5rem;
     line-height: 2.2rem;
-    color: #9eabb3;
+    color: #bdc3c7
 }
 
 .post-meta a {
-    color: #9eabb3;
-    text-decoration: none;
+    color: #bdc3c7;
+    text-decoration: none
 }
 
 .post-meta a:hover {
-    color: #9eabb3;
-    text-decoration: underline;
+    color: #bdc3c7;
+    text-decoration: underline
 }
 
 .post-template .post-meta,
 .page-template .post-meta {
-    margin: 0;
+    margin: 0
 }
 
 .post-template .post-date,
 .page-template .post-date {
     padding: 0;
     margin: 0;
-    border: none;
+    border: none
 }
 
 /* Tweak the .post wrapper style */
 .post-template .post,
 .page-template .post {
-    margin-top: 0;
+    /* margin-top: 0; */
     border-bottom: none;
-    padding-bottom: 0;
+    padding-bottom: 0
 }
 
 /* Kill that stylish little circle that was on the border, too */
 .post-template .post::after,
 .page-template .post::after {
-    display: none;
+    display: none
 }
 
 /* ==========================================================================
@@ -105,15 +104,15 @@ div.page-template .post-title {
 
 @media only screen and (max-width: 900px) {
     .post {
-        font-size: 0.95em;
+        font-size: 0.95em
     }
 
     h1:not(.post-template) .post-title {
-        font-size: 3.2rem;
+        font-size: 3.2rem
     }
 
     div.page-template .post-title {
-        font-size: 4.5rem;
+        font-size: 4.5rem
     }
 }
 
@@ -126,28 +125,28 @@ div.page-template .post-title {
         width: auto;
         margin: 2rem 16px;
         padding-bottom: 2rem;
-        line-height: 1.65em;
+        line-height: 1.65em
     }
 
     h1:not(.post-template) .post-title {
-        font-size: 2.5rem;
+        font-size: 2.5rem
     }
 
     div.page-template .post-title {
-        font-size: 2.8rem;
+        font-size: 2.8rem
     }
 
     .post-template .post-date,
     .page-template .post-date {
-        display: inline-block;
+        display: inline-block
     }
 
     .post-excerpt p {
-        font-size: 0.85em;
+        font-size: 0.85em
     }
 
     .post-meta {
         font-size: 1.3rem;
-        margin-top: 1rem;
+        margin-top: 1rem
     }
 }

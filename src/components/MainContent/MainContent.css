@@ -1,7 +1,37 @@
 /* Stop elements, such as img wider than the post content, from
    creating horizontal scroll - slight hack due to imperfections
    with browser width % calculations and rounding */
+.home-template .content,
 .post-template .content,
 .page-template .content {
-    overflow: hidden;
+    overflow: hidden
+}
+
+.content img {
+    max-width: 100%
+}
+
+.content .anchor {
+    float: left;
+    padding-right: 4px;
+    margin-left: -20px;
+    line-height: 1
+}
+
+.content .anchor:hover {
+    text-decoration: none
+}
+
+.content .anchor svg {
+    fill: #bdc3c7;
+    vertical-align: middle;
+    visibility: hidden
+}
+
+.content .anchor svg:hover {
+    fill: #60a8dc
+}
+
+.content *:hover > .anchor svg {
+    visibility: visible
 }

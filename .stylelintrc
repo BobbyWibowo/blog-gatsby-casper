@@ -1,6 +1,7 @@
 {
-    "extends": "stylelint-config-standard",
-    "rules": {
-        "indentation": 4
-    }
+  "extends": "stylelint-config-standard",
+  "rules": {
+    "declaration-block-trailing-semicolon": "never",
+    "indentation": 4
+  }
 }

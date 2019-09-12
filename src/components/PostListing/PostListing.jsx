@@ -1,14 +1,14 @@
-import React from "react";
-import { Link } from "gatsby";
-import AuthorThumbnail from "../AuthorThumbnail/AuthorThumbnail";
-import PostTags from "../PostTags/PostTags";
-import SiteConfig from "../../../data/SiteConfig";
-import AuthorLink from "../AuthorLink/AuthorLink";
-import PostFormatting from "../../components/PostFormatting/PostFormatting";
-import PostHeader from "../../components/PostHeader/PostHeader";
-import PostDate from "../PostDate/PostDate";
-import AuthorModel from "../../models/author-model";
-import "./PostListing.css";
+import React from 'react'
+import { Link } from 'gatsby'
+import AuthorThumbnail from '../AuthorThumbnail/AuthorThumbnail'
+import PostTags from '../PostTags/PostTags'
+import SiteConfig from '../../../data/SiteConfig'
+import AuthorLink from '../AuthorLink/AuthorLink'
+import PostFormatting from '../../components/PostFormatting/PostFormatting'
+import PostHeader from '../../components/PostHeader/PostHeader'
+import PostDate from '../PostDate/PostDate'
+import AuthorModel from '../../models/author-model'
+import './PostListing.css'
 
 const getPostList = (postEdges, authorEdges) =>
   postEdges.map(postEdge => ({
@@ -24,18 +24,22 @@ const getPostList = (postEdges, authorEdges) =>
     ),
     excerpt: postEdge.node.excerpt,
     timeToRead: postEdge.node.timeToRead
-  }));
+  }))
 
 class PostListing extends React.Component {
-  render() {
-    const postList = getPostList(this.props.postEdges, this.props.postAuthors);
+  render () {
+    const postList = getPostList(this.props.postEdges, this.props.postAuthors)
 
     return (
       <div>
         {/* This is the post loop - each post will be output using this markup */}
         {postList.map(post => {
-          const { title, path, excerpt, author, tags, date } = post;
-          const className = post.post_class ? post.post_class : "post";
+          const { title, path, excerpt, author, tags, date } = post
+          const className = post.post_class ? post.post_class : 'post'
+
+          const readMore = excerpt.endsWith('…')
+            ? <Link className="read-more" to={path}>[&hellip;]</Link>
+            : ''
 
           return (
             <PostFormatting className={className} key={title}>
@@ -45,12 +49,8 @@ class PostListing extends React.Component {
                 </h2>
               </PostHeader>
               <section className="post-excerpt">
-                {/* TODO limit excerpt to 26 words */}
                 <p>
-                  {excerpt}{" "}
-                  <Link className="read-more" to={path}>
-                    &raquo;
-                  </Link>
+                  {excerpt.endsWith('…') ? `${excerpt.slice(0, -1)} ` : excerpt}{readMore}
                 </p>
               </section>
               <footer className="post-meta">
@@ -60,11 +60,11 @@ class PostListing extends React.Component {
                 <PostDate date={date} />
               </footer>
             </PostFormatting>
-          );
+          )
         })}
       </div>
-    );
+    )
   }
 }
 
-export default PostListing;
+export default PostListing

@@ -2,4 +2,4 @@ User-agent: *
 Disallow: */tags/
 Disallow: */categories/
 
-sitemap: https://haysclark.github.io/gatsby-starter-casper/sitemap.xml
+sitemap: https://blog.fiery.me/sitemap.xml

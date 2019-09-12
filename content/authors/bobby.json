@@ -1,0 +1,26 @@
+{
+  "uid": "bobby",
+  "name": "Bobby Wibowo",
+  "image": "/logos/logo-600x600.png",
+  "url": "https://fiery.me",
+  "location": "Medan, Indonesia",
+  "bio": "\"Life is like riding a bicycle. To keep your balance, you must keep moving.\"<br>- Albert Einstein",
+  "socialUrls": [
+    {
+      "title": "GitHub",
+      "url": "https://github.com/BobbyWibowo"
+    },
+    {
+      "title": "Twitter",
+      "url": "https://twitter.com/BobbyWibowoB"
+    },
+    {
+      "title": "Reddit",
+      "url": "https://www.reddit.com/user/BobbyWibowo"
+    },
+    {
+      "title": "E-mail",
+      "url": "mailto:bobby@fiery.me"
+    }
+  ]
+}

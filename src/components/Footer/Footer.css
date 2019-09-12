@@ -9,31 +9,31 @@
     font-family: "Open Sans", sans-serif;
     font-size: 1rem;
     line-height: 1.75em;
-    color: #bbc7cc;
+    color: #bbc7cc
 }
 
 .site-footer a {
     color: #bbc7cc;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: bold
 }
 
 .site-footer a:hover {
     color: #bbc7cc;
-    border-bottom: #bbc7cc 1px solid;
+    border-bottom: #bbc7cc 1px solid
 }
 
 .poweredby {
     display: block;
     width: 45%;
     float: right;
-    text-align: right;
+    text-align: right
 }
 
 .copyright {
     display: block;
     width: 45%;
-    float: left;
+    float: left
 }
 
 /* ==========================================================================
@@ -42,11 +42,11 @@
 
 @media only screen and (max-width: 500px) {
     .site-footer {
-        margin-top: 3rem;
+        margin-top: 3rem
     }
 
     .post-template .site-footer,
     .page-template .site-footer {
-        margin-top: 0;
+        margin-top: 0
     }
 }

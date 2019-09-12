@@ -1,0 +1,23 @@
+---
+title: "Issue with Cloudflare API and its impact to the safe"
+cover: "https://picsum.photos/1280/300/?random"
+author: "bobby"
+date: "2018-10-01 21:09:48"
+category: "n/a"
+tags:
+    - General
+    - Safe
+---
+Hi guys,
+
+Sorry for this, in the past few days, a bit over 7 days to be exact, we have been having some issue with Cloudflare API. Mainly, we keep on getting "TCP connection reset" when making any requests to the API. I have contacted the server host but I was told to contact Cloudflare directly (to be honest I was more inclined to believe it was an issue with the server host).
+
+So what does that mean for us exactly?
+
+First, we are using Cloudflare as the CDN for your data ([read more](https://en.wikipedia.org/wiki/Content_delivery_network)). When you delete your files from safe.fiery.me, they will immediately be deleted from our server, but they will still exist in Cloudflare's caches. So we have automated this so that whenever you delete your files, our server will also make a request to Cloudflare API, telling them to also delete the files from their caches. But now that we are unable to connect to Cloudflare API, your files will still remain in Cloudflare's caches and be accessible through the URLs we have assigned to your files.
+
+But still, the actual situation is not really that bad. All these times, we have always had `must-revalidate` and `proxy-revalidate` in the HTTP headers of all of the files served through our server ([read more](https://support.cloudflare.com/hc/en-us/articles/115003206852-Origin-Cache-Control)), which means Cloudflare will keep on revalidating the files; checking things like whether they are still serving the exact same files or whether the files themselves still exist in our server.
+
+Though even then, the process will not be instantaneous and may even take up to a full 24 hours until Cloudflare notice the files have been deleted from our server.
+
+So yeah, please bear with this for now. Meanwhile I will try to contact Cloudflare for more information.

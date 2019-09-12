@@ -1,0 +1,20 @@
+---
+title: "Recent changes to the safe"
+cover: "https://picsum.photos/1280/300/?random"
+author: "bobby"
+date: "2018-12-11 09:32:38"
+category: "n/a"
+tags:
+    - Safe
+---
+Hello there, another update post here~
+
+If you haven't noticed, a few days ago we've disabled URL uploads. It was mainly because DuckDuckGo stopped serving `Content-Length` header for their proxy. The header was crucial so that the server could predict the file size without having to download it.
+
+Other than that, file extensions that do not have specific mime types will now be served as `text/plain` instead of `application/octet-stream`. What this means is that, browsers will now stop asking those files to be saved and instead will try to display their content, as text, right on your browser (usually you can still configure this behavior on your browser's preferences).
+
+To be specific, this only applies to file extensions that aren't being recognized by nginx's mime types table. Most common extensions will work as normal.
+
+You can still save the content by "right click > save page as", or something along that line.
+
+That's all for now. See ya~

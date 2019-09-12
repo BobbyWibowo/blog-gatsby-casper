@@ -6,37 +6,19 @@
     position: absolute;
     top: 3rem;
     right: 0;
-    width: 140px;
+    width: 140px
 }
 
-.post-footer .share a {
-    font-size: 1.8rem;
-    display: inline-block;
-    margin: 1rem 1.6rem 1.6rem 0;
-    color: #bbc7cc;
-    text-decoration: none;
-}
-
-.post-footer .share .icon-twitter:hover {
-    color: #55acee;
-}
-
-.post-footer .share .icon-facebook:hover {
-    color: #3b5998;
-}
-
-.post-footer .share .icon-pinterest:hover {
-    color: #3b5998;
-}
-
-.post-footer .share .icon-google-plus:hover {
-    color: #dd4b39;
+.post-footer .share .SocialMediaShareButton {
+    cursor: pointer;
+    margin: 0.8rem
 }
 
 /* ==========================================================================
    13. Media Queries - Smaller than 500px
    ========================================================================== */
 
+/*
 @media only screen and (max-width: 500px) {
     .post-footer .share {
         position: static;
@@ -47,3 +29,4 @@
         margin: 1.4rem 0.8rem 0;
     }
 }
+*/

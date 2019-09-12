@@ -1,66 +1,66 @@
-import React from "react";
-import { Link } from "gatsby";
-import "./Author.css";
+import React from 'react'
+import { Link } from 'gatsby'
+import './Author.css'
 
 const Bio = props => {
-  const { text } = props;
-  if (text) {
-    return <p>{text}</p>;
-  }
+  const { text } = props
+  if (text)
+    return <p>{text}</p>
+
   return (
     <p>
       Read <Link to="/">more posts</Link> by this author.
     </p>
-  );
-};
+  )
+}
 
 const Location = props => {
-  const { location } = props;
-  if (location) {
+  const { location } = props
+  if (location)
     return (
       <span>
         <span
-          style={{ fontSize: "2rem", margin: 0, verticalAlign: "middle" }}
+          style={{ fontSize: '2rem', margin: 0, verticalAlign: 'middle' }}
           className="icon-location"
         />
         <span className="author-location">{location}</span>
       </span>
-    );
-  }
-  return null;
-};
+    )
+
+  return null
+}
 
 const Website = props => {
-  const { url } = props;
-  if (url) {
+  const { url } = props
+  if (url)
     return (
       <span>
         <span
-          style={{ fontSize: "2rem", margin: 0, verticalAlign: "middle" }}
+          style={{ fontSize: '2rem', margin: 0, verticalAlign: 'middle' }}
           className="icon-link"
         />
         <span className="author-link">
           <Link to={url}>{url}</Link>
         </span>
       </span>
-    );
-  }
-  return null;
-};
+    )
+
+  return null
+}
 
 class Author extends React.Component {
-  render() {
-    const { author } = this.props;
+  render () {
+    const { author } = this.props
     if (author) {
-      const { name, bio, location, website, avatar } = author;
-      if (name && bio && location && website && avatar) {
+      const { name, bio, location, website, avatar } = author
+      if (name && bio && location && website && avatar)
         return (
           <div>
             <figure className="author-image">
               <Link
                 className="img"
                 to="/"
-                style={{ backgroundImage: `url( ${avatar} )` }}
+                style={{ backgroundImage: `url(${avatar})` }}
               >
                 <span className="hidden">{`${name}'s Picture`}</span>
               </Link>
@@ -77,11 +77,10 @@ class Author extends React.Component {
               </div>
             </section>
           </div>
-        );
-      }
+        )
     }
-    return <div style={{ height: 70 }} />;
+    return <div style={{ height: 70 }} />
   }
 }
 
-export default Author;
+export default Author

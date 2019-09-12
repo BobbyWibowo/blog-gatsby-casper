@@ -1,22 +1,23 @@
-import React from "react";
+import React from 'react'
+import './AuthorStats.css'
 
 class AuthorStats extends React.Component {
-  render() {
-    const { postEdges } = this.props;
+  render () {
+    const { postEdges } = this.props
     const getPostText = () => {
-      if (postEdges) {
+      if (postEdges)
         return postEdges.length > 1
           ? `${postEdges.length} posts`
-          : `${postEdges.length} post`;
-      }
-      return "No posts";
-    };
+          : `${postEdges.length} post`
+
+      return 'No posts'
+    }
     return (
       <span className="author-stats">
-        <i className="icon-stats" /> {getPostText()}
+        <i className="icon-stats" />{getPostText()}
       </span>
-    );
+    )
   }
 }
 
-export default AuthorStats;
+export default AuthorStats

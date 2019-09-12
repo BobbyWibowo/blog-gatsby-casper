@@ -1,40 +1,41 @@
-import { graphql } from "gatsby";
-import React from "react";
-import Helmet from "react-helmet";
-import SEO from "../components/SEO/SEO";
-import config from "../../data/SiteConfig";
-import MainHeader from "../components/MainHeader/MainHeader";
-import MainNav from "../components/MainNav/MainNav";
-import BlogLogo from "../components/BlogLogo/BlogLogo";
-import MenuButton from "../components/MenuButton/MenuButton";
-import Drawer from "../components/Drawer/Drawer";
-import Navigation from "../components/Navigation/Navigation";
-import SiteWrapper from "../components/SiteWrapper/SiteWrapper";
-import MainContent from "../components/MainContent/MainContent";
-import PostHeader from "../components/PostHeader/PostHeader";
-import PostFormatting from "../components/PostFormatting/PostFormatting";
-import PostDate from "../components/PostDate/PostDate";
-import PostFooter from "../components/PostFooter/PostFooter";
-import AuthorImage from "../components/AuthorImage/AuthorImage";
-import AuthorInfo from "../components/AuthorInfo/AuthorInfo";
-import PostShare from "../components/PostShare/PostShare";
-import GhostSubscribe from "../components/GhostSubscribe/GhostSubscribe";
-import ReadNext from "../components/ReadNext/ReadNext";
-import PostTags from "../components/PostTags/PostTags";
-import Footer from "../components/Footer/Footer";
-import AuthorModel from "../models/author-model";
-import Disqus from "../components/Disqus/Disqus";
-import Layout from "../components/layout";
+import { graphql } from 'gatsby'
+import { MDXRenderer } from 'gatsby-plugin-mdx'
+import React from 'react'
+import Helmet from 'react-helmet'
+import SEO from '../components/SEO/SEO'
+import config from '../../data/SiteConfig'
+import MainHeader from '../components/MainHeader/MainHeader'
+import MainNav from '../components/MainNav/MainNav'
+import BlogLogo from '../components/BlogLogo/BlogLogo'
+import MenuButton from '../components/MenuButton/MenuButton'
+import Drawer from '../components/Drawer/Drawer'
+import Navigation from '../components/Navigation/Navigation'
+import SiteWrapper from '../components/SiteWrapper/SiteWrapper'
+import MainContent from '../components/MainContent/MainContent'
+import PostHeader from '../components/PostHeader/PostHeader'
+import PostFormatting from '../components/PostFormatting/PostFormatting'
+import PostDate from '../components/PostDate/PostDate'
+import PostFooter from '../components/PostFooter/PostFooter'
+import AuthorImage from '../components/AuthorImage/AuthorImage'
+import AuthorInfo from '../components/AuthorInfo/AuthorInfo'
+import PostShare from '../components/PostShare/PostShare'
+import GhostSubscribe from '../components/GhostSubscribe/GhostSubscribe'
+import ReadNext from '../components/ReadNext/ReadNext'
+import PostTags from '../components/PostTags/PostTags'
+import Footer from '../components/Footer/Footer'
+import AuthorModel from '../models/author-model'
+import Disqus from '../components/Disqus/Disqus'
+import Layout from '../components/layout'
 
-function parsePost(post, slug) {
-  const result = post;
-  if (!result.id) {
-    result.id = slug;
-  }
-  if (!result.id) {
-    result.category_id = config.postDefaultCategoryID;
-  }
-  return result;
+function parsePost (post, slug) {
+  const result = post
+  if (!result.id)
+    result.id = slug
+
+  if (!result.id)
+    result.category_id = config.postDefaultCategoryID
+
+  return result
 }
 
 const formatReadNext = value => ({
@@ -42,7 +43,7 @@ const formatReadNext = value => ({
   title: value.frontmatter.title,
   cover: value.frontmatter.cover,
   excerpt: value.excerpt
-});
+})
 
 class PostTemplate extends React.Component {
   state = {
@@ -50,41 +51,40 @@ class PostTemplate extends React.Component {
   };
 
   handleOnClick = evt => {
-    evt.stopPropagation();
-    if (this.state.menuOpen) {
-      this.closeMenu();
-    } else {
-      this.openMenu();
-    }
+    evt.stopPropagation()
+    if (this.state.menuOpen)
+      this.closeMenu()
+    else
+      this.openMenu()
   };
 
   handleOnClose = evt => {
-    evt.stopPropagation();
-    this.closeMenu();
+    evt.stopPropagation()
+    this.closeMenu()
   };
 
   openMenu = () => {
-    this.setState({ menuOpen: true });
+    this.setState({ menuOpen: true })
   };
 
   closeMenu = () => {
-    this.setState({ menuOpen: false });
+    this.setState({ menuOpen: false })
   };
 
-  render() {
-    const { location, data } = this.props;
-    const { slug, next, prev } = this.props.pageContext;
-    const postNode = this.props.data.markdownRemark;
-    const post = parsePost(postNode.frontmatter, slug);
-    const { cover, title, date, author, tags } = post;
-    const className = post.post_class ? post.post_class : "post";
+  render () {
+    const { location, data } = this.props
+    const { slug, next, prev } = this.props.pageContext
+    const postNode = this.props.data.mdx
+    const post = parsePost(postNode.frontmatter, slug)
+    const { cover, title, date, author, tags } = post
+    const className = post.post_class ? post.post_class : 'post'
     const authorData = AuthorModel.getAuthor(
       this.props.data.authors.edges,
       author,
       config.blogAuthorId
-    );
-    const getNextData = () => (next ? formatReadNext(data.next) : null);
-    const getPrevData = () => (prev ? formatReadNext(data.prev) : null);
+    )
+    const getNextData = () => (next ? formatReadNext(data.next) : null)
+    const getPrevData = () => (prev ? formatReadNext(data.prev) : null)
 
     return (
       <Layout location={this.props.location}>
@@ -117,10 +117,16 @@ class PostTemplate extends React.Component {
                   </section>
                 </PostHeader>
 
+                <section className="post-content">
+                  <MDXRenderer>{postNode.body}</MDXRenderer>
+                </section>
+
+                {/*
                 <section
                   className="post-content"
                   dangerouslySetInnerHTML={{ __html: postNode.html }}
                 />
+                */}
 
                 <PostFooter>
                   <AuthorImage author={authorData} />
@@ -145,15 +151,15 @@ class PostTemplate extends React.Component {
           </SiteWrapper>
         </Drawer>
       </Layout>
-    );
+    )
   }
 }
 
 /* eslint no-undef: "off" */
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!, $next: String, $prev: String) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      html
+    mdx(fields: { slug: { eq: $slug } }) {
+      body
       timeToRead
       excerpt
       frontmatter {
@@ -169,7 +175,7 @@ export const pageQuery = graphql`
       }
     }
     # prev post data
-    prev: markdownRemark(fields: { slug: { eq: $prev } }) {
+    prev: mdx(fields: { slug: { eq: $prev } }) {
       excerpt(pruneLength: 112)
       frontmatter {
         title
@@ -181,7 +187,7 @@ export const pageQuery = graphql`
       }
     }
     # next post data
-    next: markdownRemark(fields: { slug: { eq: $next } }) {
+    next: mdx(fields: { slug: { eq: $next } }) {
       excerpt(pruneLength: 112)
       frontmatter {
         title
@@ -205,6 +211,6 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`
 
-export default PostTemplate;
+export default PostTemplate

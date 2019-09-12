@@ -5,7 +5,7 @@
     border-left: #d5dbde 1px solid;
     text-transform: uppercase;
     font-size: 1.3rem;
-    white-space: nowrap;
+    white-space: nowrap
 }
 
 /* ==========================================================================
@@ -14,6 +14,6 @@
 
 @media only screen and (max-width: 500px) {
     .post-date {
-        display: none;
+        display: none
     }
 }

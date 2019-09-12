@@ -1,0 +1,202 @@
+/** TODO: Think of a better location for this file **/
+
+/* ==========================================================================
+      Third Party Elements - Embeds from other services
+   ========================================================================== */
+
+/* Github */
+.gist table {
+    margin: 0;
+    font-size: 1.4rem;
+    text-rendering: auto
+}
+
+.gist td {
+    line-height: 1.4
+}
+
+.gist .line-number {
+    min-width: 25px
+}
+
+/* Pastebin */
+.content .embedPastebin {
+    margin-bottom: 1.75em
+}
+
+/* Gatsby Highlight (PrismJS) */
+.gatsby-highlight {
+    position: relative
+}
+
+.gatsby-highlight pre[class*="language-"] {
+    background-color: #31363b;
+    overflow: auto;
+    min-width: 100%;
+    margin: 0 0 1.75em
+}
+
+.gatsby-highlight pre[class*="language-"]::before {
+    background: #ddd;
+    border-radius: 0 0 4px 4px;
+    color: #232629;
+    font-size: 1rem;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    letter-spacing: 0.075em;
+    line-height: 1;
+    padding: 0.25rem 0.5rem;
+    position: absolute;
+    left: 1.5rem;
+    text-align: right;
+    text-transform: uppercase;
+    top: 0
+}
+
+.gatsby-highlight pre[class='language-js']::before,
+.gatsby-highlight pre[class='language-javascript']::before {
+    content: 'js';
+    background: #f7df1e
+}
+
+.gatsby-highlight pre[class='language-jsx']::before {
+    content: 'jsx';
+    background: #61dafb
+}
+
+.gatsby-highlight pre[class='language-graphql']::before {
+    content: 'GraphQL';
+    background: #e10098;
+    color: #fff
+}
+
+.gatsby-highlight pre[class='language-html']::before {
+    content: 'html';
+    background: #005a9c;
+    color: #fff
+}
+
+.gatsby-highlight pre[class='language-css']::before {
+    content: 'css';
+    background: #ff9800;
+    color: #fff
+}
+
+.gatsby-highlight pre[class='language-mdx']::before {
+    content: 'mdx';
+    background: #f9ac00;
+    color: #fff;
+    font-weight: 400
+}
+
+.gatsby-highlight pre[class='language-shell']::before {
+    content: 'shell'
+}
+
+.gatsby-highlight pre[class='language-sh']::before {
+    content: 'sh'
+}
+
+.gatsby-highlight pre[class='language-bash']::before {
+    content: 'bash'
+}
+
+.gatsby-highlight pre[class='language-yaml']::before {
+    content: 'yaml';
+    background: #ffa8df
+}
+
+.gatsby-highlight pre[class='language-markdown']::before {
+    content: 'md'
+}
+
+.gatsby-highlight pre[class='language-json']::before,
+.gatsby-highlight pre[class='language-json5']::before {
+    content: 'json';
+    background: #faf0e6
+}
+
+.gatsby-highlight pre[class='language-diff']::before {
+    content: 'diff';
+    background: #e6ffed
+}
+
+.gatsby-highlight pre[class='language-text']::before {
+    content: 'text';
+    background: #fff
+}
+
+.gatsby-highlight pre[class='language-flow']::before {
+    content: 'flow';
+    background: #e8bd36
+}
+
+.gatsby-highlight pre[class='language-php']::before {
+    content: 'php';
+    background: #8892bf
+}
+
+.gatsby-highlight pre[class='language-perl']::before {
+    content: 'perl';
+    color: #fff;
+    background: #0073a1
+}
+
+.gatsby-highlight pre[class='language-java']::before {
+    content: 'java';
+    color: #fff;
+    background: #ed1c24
+}
+
+.gatsby-highlight-code-line {
+    background-color: #232629;
+    display: block;
+    margin-right: -1em;
+    margin-left: -1em;
+    padding-right: 1em;
+    padding-left: 0.75em;
+    border-left: 0.25em solid #3794d2
+}
+
+/* ==========================================================================
+       Media Queries - Smaller than 900px
+   ========================================================================== */
+
+@media only screen and (max-width: 900px) {
+    blockquote {
+        margin-left: 0
+    }
+
+    hr {
+        margin: 2.4em 0
+    }
+
+    ol,
+    ul {
+        padding-left: 2em
+    }
+
+    h1 {
+        font-size: 4.5rem;
+        text-indent: -2px
+    }
+
+    h2 {
+        font-size: 3.6rem
+    }
+
+    h3 {
+        font-size: 3.1rem
+    }
+
+    h4 {
+        font-size: 2.5rem
+    }
+
+    h5 {
+        font-size: 2.2rem
+    }
+
+    h6 {
+        font-size: 1.8rem
+    }
+}

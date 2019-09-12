@@ -1,23 +1,23 @@
-import { graphql } from "gatsby";
-import React from "react";
-import Helmet from "react-helmet";
-import { Link } from "react-scroll";
-import PostListing from "../components/PostListing/PostListing";
-import SEO from "../components/SEO/SEO";
-import config from "../../data/SiteConfig";
-import Drawer from "../components/Drawer/Drawer";
-import Navigation from "../components/Navigation/Navigation";
-import SiteWrapper from "../components/SiteWrapper/SiteWrapper";
-import Footer from "../components/Footer/Footer";
-import MainHeader from "../components/MainHeader/MainHeader";
-import MainNav from "../components/MainNav/MainNav";
-import BlogLogo from "../components/BlogLogo/BlogLogo";
-import MenuButton from "../components/MenuButton/MenuButton";
-import PageTitle from "../components/PageTitle/PageTitle";
-import PageDescription from "../components/PageDescription/PageDescription";
-import PaginatedContent from "../components/PaginatedContent/PaginatedContent";
-import SocialMediaIcons from "../components/SocialMediaIcons/SocialMediaIcons";
-import Layout from "../components/layout";
+import { graphql } from 'gatsby'
+import React from 'react'
+import Helmet from 'react-helmet'
+import { Link } from 'react-scroll'
+import PostListing from '../components/PostListing/PostListing'
+import SEO from '../components/SEO/SEO'
+import config from '../../data/SiteConfig'
+import Drawer from '../components/Drawer/Drawer'
+import Navigation from '../components/Navigation/Navigation'
+import SiteWrapper from '../components/SiteWrapper/SiteWrapper'
+import Footer from '../components/Footer/Footer'
+import MainHeader from '../components/MainHeader/MainHeader'
+import MainNav from '../components/MainNav/MainNav'
+import BlogLogo from '../components/BlogLogo/BlogLogo'
+import MenuButton from '../components/MenuButton/MenuButton'
+import PageTitle from '../components/PageTitle/PageTitle'
+import PageDescription from '../components/PageDescription/PageDescription'
+import PaginatedContent from '../components/PaginatedContent/PaginatedContent'
+import SocialMediaIcons from '../components/SocialMediaIcons/SocialMediaIcons'
+import Layout from '../components/layout'
 
 class IndexTemplate extends React.Component {
   state = {
@@ -25,28 +25,27 @@ class IndexTemplate extends React.Component {
   };
 
   handleOnClick = evt => {
-    evt.stopPropagation();
-    if (this.state.menuOpen) {
-      this.closeMenu();
-    } else {
-      this.openMenu();
-    }
+    evt.stopPropagation()
+    if (this.state.menuOpen)
+      this.closeMenu()
+    else
+      this.openMenu()
   };
 
   handleOnClose = evt => {
-    evt.stopPropagation();
-    this.closeMenu();
+    evt.stopPropagation()
+    this.closeMenu()
   };
 
   openMenu = () => {
-    this.setState({ menuOpen: true });
+    this.setState({ menuOpen: true })
   };
 
   closeMenu = () => {
-    this.setState({ menuOpen: false });
+    this.setState({ menuOpen: false })
   };
 
-  render() {
+  render () {
     const {
       nodes,
       page,
@@ -55,8 +54,8 @@ class IndexTemplate extends React.Component {
       limit,
       prev,
       next
-    } = this.props.pageContext;
-    const authorsEdges = this.props.data.authors.edges;
+    } = this.props.pageContext
+    const authorsEdges = this.props.data.authors.edges
 
     return (
       <Layout location={this.props.location}>
@@ -122,7 +121,7 @@ class IndexTemplate extends React.Component {
           </SiteWrapper>
         </Drawer>
       </Layout>
-    );
+    )
   }
 }
 
@@ -143,6 +142,6 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`
 
-export default IndexTemplate;
+export default IndexTemplate

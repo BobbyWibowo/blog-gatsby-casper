@@ -1,0 +1,40 @@
+---
+title: "Uptime monitor (update)"
+cover: "https://picsum.photos/1280/300/?random"
+author: "bobby"
+date: "2019-02-01 00:18:00"
+category: "n/a"
+tags:
+    - General
+    - Safe
+    - Paste
+---
+*Edited post. This was originally posted at 16/05/2018.*
+
+Hello there,
+
+We now have uptime monitors for the safe and the ~~hastebin~~ PrivateBin that you can check out from here: [https://stats.uptimerobot.com/OPwo4uOz8](https://stats.uptimerobot.com/OPwo4uOz8). It's powered by [Uptime Robot](https://uptimerobot.com/), so props to the folks in there.
+
+~~I wanted to use *status.fiery.me* as its custom domain, but Uptime Robot seem to have issues with their certificates when being used with Cloudflare's Full SSL (Strict), so I had no choice but to link the default URL in this blog post.~~
+
+\* [https://status.fiery.me](https://status.fiery.me) will now redirect to the URL above.
+
+On a side note, *i.fiery.me* is the domain used to serve files uploaded to the safe. Unlike the safe which runs with Node + Nginx, *i.fiery.me* runs only with Nginx, which guarantees that even when Node dies, files can still be served. So, I made an extra monitor for it.
+
+Anyways, that's all. I hope you guys find it useful one way or another.
+
+See ya.
+
+**UPDATE 01/02/2019:** Update, uwu~
+
+A user recently mentioned that Uptime Robot isn't fast enough. I can certainly agree with that as it only checks every 5 minutes, so at most it can only be used as rough estimates of the total uptime (I, on the other hand, intended that as a "proof" that the safe have +99% uptime).
+
+The said user also recommended me an uptime check tool from Website Planet, that seems to only check the uptime everytime you actually visit the status page.
+
+It seems to work like any other one-time uptime checker tool thing, but it looks pretty good to me, so I'll also link it down below.
+
+`https://www.websiteplanet.com/webtools/down-or-not?page=https%3A%2F%2Fsafe.fiery.me%2Fnojs`
+
+One thing to note when using this sort of tool, if you want immediate (a.k.a not "cached") result, you should always check uptime status of the `/nojs` route instead (`https://safe.fiery.me/nojs`).
+
+Reason being, we are caching almost all front-end pages, excluding that route. So when the safe is actually down, you will not be able to upload anything, but can still access the safe's homepage just fine (`/nojs` route on the other hand is a dynamic page, so we are not caching that).

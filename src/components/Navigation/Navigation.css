@@ -5,7 +5,7 @@
     left: 0;
     right: 240px;
     bottom: 0;
-    z-index: 10;
+    z-index: 10
 }
 
 .nav {
@@ -23,15 +23,24 @@
     -webkit-transition:
         -webkit-transform 0.5s ease,
         opacity 0.3s ease 0.7s;
+    -webkit-transition:
+        opacity 0.3s ease 0.7s,
+        -webkit-transform 0.5s ease;
+    transition:
+        opacity 0.3s ease 0.7s,
+        -webkit-transform 0.5s ease;
     transition:
         transform 0.5s ease,
         opacity 0.3s ease 0.7s;
+    transition:
+        transform 0.5s ease,
+        opacity 0.3s ease 0.7s,
+        -webkit-transform 0.5s ease
 }
 
 .nav-closed .nav {
     -webkit-transform: translate3d(97px, 0, 0);
-    -ms-transform: translate3d(97px, 0, 0);
-    transform: translate3d(97px, 0, 0);
+    transform: translate3d(97px, 0, 0)
 }
 
 .nav-opened .nav {
@@ -39,12 +48,21 @@
     -webkit-transition:
         -webkit-transform 0.3s ease,
         opacity 0s ease 0s;
+    -webkit-transition:
+        opacity 0s ease 0s,
+        -webkit-transform 0.3s ease;
+    transition:
+        opacity 0s ease 0s,
+        -webkit-transform 0.3s ease;
     transition:
         transform 0.3s ease,
         opacity 0s ease 0s;
+    transition:
+        transform 0.3s ease,
+        opacity 0s ease 0s,
+        -webkit-transform 0.3s ease;
     -webkit-transform: translate3d(0, 0, 0);
-    -ms-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0)
 }
 
 .nav-title {
@@ -54,7 +72,7 @@
     font-size: 16px;
     font-weight: 100;
     text-transform: uppercase;
-    color: #fff;
+    color: #fff
 }
 
 .nav-close {
@@ -64,11 +82,11 @@
     width: 20px;
     height: 20px;
     padding: 0;
-    font-size: 10px;
+    font-size: 10px
 }
 
 .nav-close:focus {
-    outline: 0;
+    outline: 0
 }
 
 .nav-close::before,
@@ -82,30 +100,28 @@
     background: rgb(150, 150, 150);
     top: 15px;
     -webkit-transition: background 0.15s ease;
-    transition: background 0.15s ease;
+    transition: background 0.15s ease
 }
 
 .nav-close::before {
     -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
+    transform: rotate(45deg)
 }
 
 .nav-close::after {
     -webkit-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    transform: rotate(-45deg);
+    transform: rotate(-45deg)
 }
 
 .nav-close:hover::before,
 .nav-close:hover::after {
-    background: rgb(255, 255, 255);
+    background: rgb(255, 255, 255)
 }
 
 .nav ul {
     padding: 90px 9% 5%;
     list-style: none;
-    counter-reset: item;
+    counter-reset: item
 }
 
 .nav li::before {
@@ -118,11 +134,11 @@
     vertical-align: bottom;
     color: #b8b8b8;
     content: counter(item, lower-roman);
-    counter-increment: item;
+    counter-increment: item
 }
 
 .nav li {
-    margin: 0;
+    margin: 0
 }
 
 .nav li a {
@@ -133,42 +149,41 @@
     padding: 0.6rem 4%;
     overflow: hidden;
     white-space: nowrap;
-    text-overflow: ellipsis;
+    text-overflow: ellipsis
 }
 
 .nav li a::after {
     display: inline-block;
     content: " .......................................................";
     color: rgba(255, 255, 255, 0.2);
-    margin-left: 5px;
+    margin-left: 5px
 }
 
 .nav .nav-current::before {
-    color: #fff;
+    color: #fff
 }
 
 .nav .nav-current a::after {
     content: " ";
     border-bottom: rgba(255, 255, 255, 0.5) 1px solid;
     width: 100%;
-    height: 1px;
+    height: 1px
 }
 
 .nav a:link,
 .nav a:visited {
-    color: #b8b8b8;
+    color: #b8b8b8
 }
 
-.nav li.nav-current a,
 .nav a:hover,
 .nav a:active,
-.nav a:focus {
-    color: #fff;
+.nav a:focus,
+.nav li.nav-current a {
+    color: #fff
 }
 
 .subscribe-button {
     -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
     display: block;
     position: absolute;
@@ -186,12 +201,13 @@
     line-height: 35px;
     border-radius: 3px;
     background: #fff;
-    transition: all ease 0.3s;
+    -webkit-transition: all ease 0.3s;
+    transition: all ease 0.3s
 }
 
 .subscribe-button::before {
     font-size: 9px;
-    margin-right: 6px;
+    margin-right: 6px
 }
 
 /* ==========================================================================
@@ -200,15 +216,15 @@
 
 @media only screen and (max-width: 500px) {
     .nav-title {
-        top: 25px;
+        top: 25px
     }
 
     .nav-close {
         position: absolute;
-        top: 18px;
+        top: 18px
     }
 
     .nav ul {
-        padding: 60px 9% 5%;
+        padding: 60px 9% 5%
     }
 }

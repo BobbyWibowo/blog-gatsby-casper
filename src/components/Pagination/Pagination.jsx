@@ -1,10 +1,10 @@
-import React from "react";
-import PaginationLink from "../PaginationLink/PaginationLink";
-import "./Pagination.css";
+import React from 'react'
+import PaginationLink from '../PaginationLink/PaginationLink'
+import './Pagination.css'
 
 class Pagination extends React.Component {
-  render() {
-    const { page, pages, prev, next } = this.props;
+  render () {
+    const { page, pages, prev, next } = this.props
     return (
       <nav className="pagination">
         <PaginationLink
@@ -21,8 +21,8 @@ class Pagination extends React.Component {
           text="Older Posts →"
         />
       </nav>
-    );
+    )
   }
 }
 
-export default Pagination;
+export default Pagination

@@ -1,0 +1,27 @@
+---
+title: "CHUNKED UPLOADS!!"
+cover: "https://picsum.photos/1280/300/?random"
+author: "bobby"
+date: "2018-03-29 03:50:47"
+category: "n/a"
+tags:
+    - Safe
+---
+Yayyyy~!
+
+Good news! The safe now supports chunked uploads!
+
+Chunked uploads? Nani the heck is that?
+
+Well, basically, your uploads will be split into a bunch of smaller files!
+.. but why?  
+Well, there are a couple of good reasons! But there's one that's very important among them all, in my opinion at least, and that is, we can finally "bypass" Cloudflare's 100MB upload limit!
+
+If your file is larger than 100MB, then we can just split them into multiple smaller files and upload all those pieces instead! Afterwards the server will simply have to rebuild the files, and tadaa~, a file larger than 100MB successfully uploaded through Cloudflare~!
+
+At the moment, the safe will split files into multiple 10MB pieces.  
+Which also means chunked uploads will only be enabled for files larger than 10MB.
+
+So yeah, anyways, with that I've also raised the safe's max file size to 300MB~!
+
+That's all from me for today folks~ See ya~!

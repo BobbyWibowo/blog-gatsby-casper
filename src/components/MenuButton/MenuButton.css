@@ -1,6 +1,5 @@
 .menu-button {
     -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
     display: inline-block;
     float: right;
@@ -15,7 +14,8 @@
     line-height: 35px;
     white-space: nowrap;
     border-radius: 3px;
-    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease
 }
 
 .menu-button::before {
@@ -23,36 +23,21 @@
     font-weight: bold;
     margin-right: 6px;
     position: relative;
-    top: 1px;
+    top: 1px
 }
 
 .menu-button:hover {
-    background: #fff;
+    background: #fff
 }
 
 .menu-button:focus {
-    outline: 0;
+    outline: 0
 }
 
 /* When the navigation is closed */
 .nav-closed .menu-button {
     color: #fff;
-    border-color: rgba(255, 255, 255, 0.6);
-}
-
-.nav-closed .menu-button:hover {
-    color: #222;
-}
-
-/* When the navigation is closed and there is no cover image */
-.nav-closed .no-cover .menu-button {
-    border-color: #bfc8cd;
-    color: #9eabb3;
-}
-
-.nav-closed .no-cover .menu-button:hover {
-    border-color: #555;
-    color: #555;
+    border-color: rgba(255, 255, 255, 0.6)
 }
 
 /* When the navigation is opened */
@@ -62,18 +47,34 @@
     border-color: #111;
     color: #fff;
     -webkit-transform: translate3d(94px, 0, 0);
-    -ms-transform: translate3d(94px, 0, 0);
     transform: translate3d(94px, 0, 0);
-    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease
+}
+
+/* When the navigation is closed and there is no cover image */
+.nav-closed .no-cover .menu-button {
+    border-color: #bfc8cd;
+    color: #9eabb3
+}
+
+.nav-closed .menu-button:hover {
+    color: #222
+}
+
+.nav-closed .no-cover .menu-button:hover {
+    border-color: #555;
+    color: #555
 }
 
 .nav-opened .menu-button .word {
     opacity: 0;
-    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease
 }
 
 .icon-menu::before {
-    content: "\f609";
+    content: "\f609"
 }
 
 /* ==========================================================================
@@ -86,25 +87,25 @@
         border-radius: 0;
         border-width: 0;
         color: #2e2e2e;
-        background: transparent;
+        background: transparent
     }
 
     .menu-button:hover {
         color: #2e2e2e;
         border-color: transparent;
-        background: none;
+        background: none
     }
 
     .nav-opened .menu-button {
         background: none;
-        border: transparent;
-    }
-
-    .no-cover .main-nav.overlay .menu-button {
-        border: none;
+        border: transparent
     }
 
     .main-nav.overlay .menu-button {
-        border-color: transparent;
+        border-color: transparent
+    }
+
+    .no-cover .main-nav.overlay .menu-button {
+        border: none
     }
 }

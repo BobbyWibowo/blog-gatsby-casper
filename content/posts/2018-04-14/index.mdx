@@ -1,0 +1,35 @@
+---
+title: "Bash uploader"
+cover: "https://picsum.photos/1280/300/?random"
+author: "bobby"
+date: "2018-04-14 00:33:00"
+category: "n/a"
+tags:
+    - General
+    - Safe
+---
+Hello,
+
+I recently forked an open source project named [uguush](https://github.com/jschx/uguush). It's a command-line uploader for various file hosts, mainly pomf clones. If you are on \*nix, it can be a simple replacement to ShareX, which is Windows-only. You can check out my fork [here](https://github.com/BobbyWibowo/uguush).
+
+My fork will upload to [safe.fiery.me](https://safe.fiery.me/) by default, but you can still use the other hosts available in it.
+
+![uguush](https://the.fiery.me/yRYR.png)
+
+The main differences between my fork and master is the ability to use token and albums.
+
+For example, running `uguush -w -t MY_TOKEN_HERE` will screenshot your active window and use `MY_TOKEN_HERE` as the token. If the token matches your account's, you will be able to see your uploaded screenshot from the safe's dashboard.
+
+Then if you run `uguush -f -t MY_TOKEN_HERE -a 1`, a fullscreen screenshot will be taken and uploaded to your account, and as long as you have an album with ID 1, the screenshot will be added to that album. I have updated albums list in safe.fiery.me to show the albums' ID a few days ago to help you in getting their IDs.
+
+Other than capturing active window and fullscreen, it can also capture selection with `-s` option.
+
+By default, it depends on [maim](https://github.com/naelstrof/maim) and [slop](https://github.com/naelstrof/slop), but if you have [KDE Spectacle](https://www.kde.org/applications/graphics/spectacle/), then you can use `-k` option to replace both maim and slop with it.
+
+Other than that, I also added `-i` option which you can use to apply shadow effect into active window capture when using maim/slop, just like spectacle. But unlike spectacle, even when the active window is maximized, it will still apply the shadow effect. Truthfully though, I ended up not using that option ever since I got spectacle. It was merely an experiment in the first place.
+
+Anyways, if you want to use it, you can add custom shortcuts if you want. At least on my end I've replaced all spectacle shortcuts with this.
+
+On a side note, technically my fork is compatible with all lolisafe-based host. You'll just have to manually edit the host from safe.fiery.me to other lolisafe-based host. Afterwards both token and albums feature should work just fine.
+
+Okay, that's all from me for today folks. See you all next time~

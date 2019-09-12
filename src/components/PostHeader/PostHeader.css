@@ -1,6 +1,6 @@
 .post-template .post-header,
 .page-template .post-header {
-    margin-bottom: 3.4rem;
+    margin-bottom: 3.4rem
 }
 
 /* ==========================================================================
@@ -10,6 +10,6 @@
 @media only screen and (max-width: 500px) {
     .post-template .post-header,
     .page-template .post-header {
-        margin-bottom: 2rem;
+        margin-bottom: 2rem
     }
 }

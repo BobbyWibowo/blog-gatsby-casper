@@ -9,17 +9,34 @@
       "experimentalObjectRestSpread": true
     }
   },
-  "extends": ["airbnb", "prettier"],
-  "plugins": ["react", "jsx-a11y", "import"],
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "extends": [
+    "standard"
+  ],
+  "plugins": [
+    "react",
+    "jsx-a11y",
+    "import"
+  ],
   "rules": {
+    "curly": [
+      "error",
+      "multi",
+      "consistent"
+    ],
+    "no-unused-vars": "off",
     "react/prefer-stateless-function": "off",
     "react/prop-types": "off",
-    "react/no-danger": "off"
+    "react/no-danger": "off",
+    "quotes": [
+      "error",
+      "single"
+    ]
   },
   "settings": {
     "import/core-modules": []
-  },
-  "env": {
-    "browser": true
   }
 }

@@ -1,0 +1,52 @@
+---
+title: "File size, chunked uploads, and stuff"
+cover: "https://picsum.photos/1280/300/?random"
+author: "bobby"
+date: "2019-08-20 09:21:23"
+category: "n/a"
+tags:
+    - Safe
+---
+Hi there!
+
+This is just a notice that starting with commit [3a39872](https://github.com/BobbyWibowo/lolisafe/commit/3a398721b576eceab7e251690750f0fe36c84d58) which fixed the uploader in relation to file size limit, I've also increased the safe's **max file size to 512MB**.
+
+And of course since we're behind Cloudflare, the uploads are chunked. For now I've also raised the **chunk size to 25MB**, since the previous 10MB was probably a bit too small and would end up needing too many connections (though I guess that wouldn't have mattered).
+
+Do remember that people using the API will still only be able to upload up to 100MB, cause Cloudflare.
+
+For those who're having issues with the chunked uploads, due to it either being too high or too low, it's possible to manually change the size through your browser's JS console.
+
+I myself tend to have the upload's connection dropped when uploading files higher than 25MB with a single chunk, cause my upload speed is a bit too slow (I suspect it's due timeout limit from the server side instead, I'll have to investigate further).
+
+Run the line below to get the current size (in bytes):
+
+```js
+page.dropzone.options.chunkSize
+// output: 25000000
+```
+
+And for example, run the line below to change it to 50MB:
+
+```js
+page.dropzone.options.chunkSize = 50 * 1e6
+// output: 50000000
+```
+
+Of course that change will only be temporary. You'll have to execute it again when you refresh the page.
+
+I plan to add a configuration window for the homepage uploader someday in the future, with chunk size as an option. Other than that, the uploader will only upload 2 files at a time for now, so maybe I'll make that configurable as well.
+
+I'll also have to look into file size limit of the URL uploaders. For now it's using DuckDuckGo to proxy things, and usually it'll only be able to proxy images, so I'm not sure if 100MB limit even make any sense. To begin with, I don't even know if they'll proxy images that weight up to 100MB.
+
+Oh well, I'll look into that someday in the future.
+
+That's all for now. See ya folks~
+
+Ps. Sweet sweet cache HIT~
+
+```bash
+$ curl -I https://i.fiery.me/lwSG.bin 2>&1 | grep 'content-length\|cf-cache-status'
+content-length: 512000000 // highlight-line
+cf-cache-status: HIT // highlight-line
+```

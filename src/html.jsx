@@ -1,11 +1,11 @@
 /* eslint import/no-unresolved:"off" */
 /* eslint import/extensions:"off" */
 /* eslint global-require:"off" */
-import React from "react";
-import favicon from "./favicon.png";
+import React from 'react'
+import favicon from './favicon.png'
 
 export default class HTML extends React.Component {
-  render() {
+  render () {
     return (
       <html lang="en">
         <head>
@@ -40,6 +40,6 @@ export default class HTML extends React.Component {
           {this.props.postBodyComponents}
         </body>
       </html>
-    );
+    )
   }
 }

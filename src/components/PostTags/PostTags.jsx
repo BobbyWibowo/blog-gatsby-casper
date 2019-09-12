@@ -1,12 +1,12 @@
-import React, { Component } from "react";
-import _ from "lodash";
-import { Link } from "gatsby";
-import "./PostTags.css";
+import React, { Component } from 'react'
+import _ from 'lodash'
+import { Link } from 'gatsby'
+import './PostTags.css'
 
 class PostTags extends Component {
-  render() {
-    const { prefix, tags } = this.props;
-    if (tags) {
+  render () {
+    const { prefix, tags } = this.props
+    if (tags)
       return (
         <span>
           {prefix}
@@ -15,14 +15,14 @@ class PostTags extends Component {
               <Link key={tag} to={`/tags/${_.kebabCase(tag)}`}>
                 {tag}
               </Link>
-              {index !== arr.length - 1 ? ", " : ""}
+              {index !== arr.length - 1 ? ', ' : ''}
             </span>
           ))}
         </span>
-      );
-    }
-    return null;
+      )
+
+    return null
   }
 }
 
-export default PostTags;
+export default PostTags

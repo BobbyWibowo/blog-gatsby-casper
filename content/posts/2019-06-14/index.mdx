@@ -1,0 +1,16 @@
+---
+title: "Recent downtime"
+cover: "https://picsum.photos/1280/300/?random"
+author: "bobby"
+date: "2019-06-14 20:08:20"
+category: "n/a"
+tags:
+    - Safe
+---
+![Downtime screenshot](./mD9R.png)
+
+Uh yeah, this was due to me rebooting the server due to a recent kernel update.
+
+After the update, I had to change some configuration to ClamAV daemon's systemd file because systemd's default timeout was 90s, while the daemon needed more time than that (we aren't exactly on that great of a server). It sorta took me a while to notice as well.
+
+Sorry for the inconveniences!
