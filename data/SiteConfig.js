@@ -8,7 +8,7 @@ module.exports = {
   siteUrl: 'https://blog.fiery.me', // Domain of your website without pathPrefix.
   pathPrefix: '', // Prefixes all links. For cases when deployed to example.github.io/gatsby-starter-casper/.
   siteDescription: 'Although it\'s just one of those starter packs...', // Website description used for RSS feeds/meta description tag.
-  siteCover: '/images/48483543_p0.darker.jpg', // Optional, the cover image used in header for home page. e.g: "/images/blog-cover.jpg",
+  siteCover: '/images/48483543_p0.darker-compressor.jpg', // Optional, the cover image used in header for home page. e.g: "/images/blog-cover.jpg",
   siteNavigation: false, // If navigation is enabled the Menu button will be visible
   siteRss: '/rss.xml', // Path to the RSS file.
   siteRssAuthor: 'Bobby Wibowo', // The author name used in the RSS file
