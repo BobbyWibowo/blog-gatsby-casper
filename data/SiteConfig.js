@@ -6,7 +6,7 @@ module.exports = {
   siteTitleAlt: 'Bobby\'s blog', // Alternative site title for SEO.
   siteLogo: '/logos/logo-600x600.png', // Logo used for SEO and manifest. e.g. "/logos/logo-1024.png",
   siteUrl: 'https://blog.fiery.me', // Domain of your website without pathPrefix.
-  // pathPrefix: "/blog-gatsby-casper", // Prefixes all links. For cases when deployed to example.github.io/gatsby-starter-casper/.
+  pathPrefix: '', // Prefixes all links. For cases when deployed to example.github.io/gatsby-starter-casper/.
   siteDescription: 'Although it\'s just one of those starter packs...', // Website description used for RSS feeds/meta description tag.
   siteCover: '/images/48483543_p0.darker.jpg', // Optional, the cover image used in header for home page. e.g: "/images/blog-cover.jpg",
   siteNavigation: false, // If navigation is enabled the Menu button will be visible

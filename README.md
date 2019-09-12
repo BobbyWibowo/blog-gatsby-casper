@@ -1,16 +1,14 @@
 <!-- markdownlint-disable MD033 -->
 # blog-gatsby-casper
 
-<div align="center">
-    <img src="static/logos/logo-600x600.png" alt="Logo" width='200px' height='200px'/>
-</div>
-
-[![JavaScript Style Guide](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/683af5dd-555c-4548-872d-50aecee99a28/deploy-status)](https://app.netlify.com/sites/stupefied-einstein-c01922/deploys)
 
 This was based on Gatsby v2 fork of [gatsby-starter-casper](https://github.com/haysclark/gatsby-starter-casper) by [@haysclark](https://github.com/haysclark).  
 The upgrade to v2 was mostly done by [@hnspn](https://github.com/hnspn) with a little help from the folks at [GatsbyCentral](https://www.gatsbycentral.com/).
 
 ## Notable changes in this fork
+
+[![JavaScript Style Guide](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
 
 * Switched to [standard](https://github.com/standard/standard) for ESLint's config.
 * Switched to [gatsby-plugin-mdx](https://www.gatsbyjs.org/packages/gatsby-plugin-mdx/) to use MDX instead of merely Markdown for pages.
