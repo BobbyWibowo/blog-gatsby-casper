@@ -5,6 +5,7 @@ module.exports = {
   siteTitle: 'Bobby\'s smexy new blog', // Site title.
   siteTitleAlt: 'Bobby\'s blog', // Alternative site title for SEO.
   siteLogo: '/logos/logo-600x600.png', // Logo used for SEO and manifest. e.g. "/logos/logo-1024.png",
+  siteLogoSmall: '/logos/logo-38x38.png', // Logo used on pages (top left corner)
   siteUrl: 'https://blog.fiery.me', // Domain of your website without pathPrefix.
   pathPrefix: '', // Prefixes all links. For cases when deployed to example.github.io/gatsby-starter-casper/.
   siteDescription: 'Although it\'s just one of those starter packs...', // Website description used for RSS feeds/meta description tag.
