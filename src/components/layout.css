@@ -44,7 +44,7 @@ h6 {
     -o-font-feature-settings: 'dlig'1, 'liga'1, 'lnum'1, 'kern'1;
     color: #bdc3c7;
     line-height: 1.15em;
-    margin: 0 0 0.4em;
+    margin: 0 0 0.75em;
     font-family: "Open Sans", sans-serif;
     text-rendering: geometricPrecision
 }

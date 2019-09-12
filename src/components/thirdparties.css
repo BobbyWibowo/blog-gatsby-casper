@@ -24,6 +24,12 @@
     margin-bottom: 1.75em
 }
 
+/* Video embeds */
+.embedVideo-iframe {
+    margin-top: 0;
+    margin-bottom: 0
+}
+
 /* Gatsby Highlight (PrismJS) */
 .gatsby-highlight {
     position: relative

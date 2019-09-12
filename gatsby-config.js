@@ -19,7 +19,6 @@ module.exports = {
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sharp',
-    'gatsby-plugin-twitter',
     {
       resolve: 'gatsby-plugin-mdx',
       options: {
@@ -38,7 +37,40 @@ module.exports = {
               withWebp: true
             }
           },
-          'gatsby-remark-embedder',
+          {
+            resolve: 'gatsby-remark-embed-video',
+            options: {
+              width: 710,
+              ratio: 1.77,
+              related: false,
+              noIframeBorder: true
+            }
+          },
+          /* bugged with mdx: https://github.com/raae/gatsby-remark-oembed/issues/66
+          {
+            resolve: '@raae/gatsby-remark-oembed',
+            options: {
+              usePrefix: true,
+              providers: {
+                include: [
+                  'CodePen',
+                  'Twitch',
+                  'Twitter',
+                  'SoundCloud'
+                ],
+                settings: {
+                  Twitter: {
+                    theme: 'dark',
+                    linkColor: '#3794d2',
+                    width: 550,
+                    align: 'center',
+                    dnt: true
+                  }
+                }
+              }
+            }
+          },
+          */
           'gatsby-remark-responsive-iframe',
           {
             resolve: 'gatsby-remark-external-links',
@@ -52,8 +84,7 @@ module.exports = {
         ],
         // temp fix for bug: https://github.com/gatsbyjs/gatsby/issues/15486#issuecomment-510153237
         plugins: [
-          'gatsby-remark-images',
-          'gatsby-remark-embedder'
+          'gatsby-remark-images'
         ]
       }
     },
