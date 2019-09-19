@@ -16,7 +16,6 @@ exports.onCreateNode = ({
     createNodeField
   } = actions
   let value
-  // if (node.internal.type === 'MarkdownRemark') {
   if (node.internal.type === 'Mdx') {
     const fileNode = getNode(node.parent)
     const parsedFilePath = path.parse(fileNode.relativePath)
