@@ -110,6 +110,16 @@ module.exports = {
       }
     },
     'gatsby-plugin-catch-links',
+    {
+      resolve: 'gatsby-plugin-postcss',
+      options: {
+        postCssPlugins: [
+          require('postcss-preset-env')({
+            stage: 0
+          })
+        ]
+      }
+    },
     'gatsby-plugin-sitemap',
     {
       resolve: 'gatsby-plugin-manifest',
