@@ -1,0 +1,23 @@
+---
+title: "Raised min file identifier length to 5 chars"
+cover: "https://picsum.photos/1280/300/?random&_=28"
+author: "bobby"
+date: "2019-11-25 15:25:00"
+category: "n/a"
+tags:
+    - Safe
+---
+
+Hey there,
+
+Just a quick announcement that I've raised min/default file identifier length to 5 chars.
+
+I've noticed the safe logging out collisions a lot recently, so I guess it's about time. For the curious, we are currently serving over 85k uploads.
+
+Other than that, if anybody had noticed before, sometimes uploads would stop without any error messages when trying to upload big files (could usually be solved by lowering chunk size).
+
+Apparently it was caused by a built-in timeout setting of the uploader script..
+
+Anyway, starting with commit [ec7c160](https://github.com/BobbyWibowo/lolisafe/commit/ec7c160f31cefd321f4de67d5ce6eb4901a1e628), you should be able to upload big files just fine.
+
+That's all for today. I'll be seeing y'all next time!
