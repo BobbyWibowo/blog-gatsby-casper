@@ -1,0 +1,38 @@
+---
+title: "Latest update regarding rate limits"
+cover: "https://picsum.photos/1280/300/?random&_=33"
+author: "bobby"
+date: "2020-04-28 03:15:00"
+category: "n/a"
+tags:
+    - General
+    - Safe
+---
+
+Hi there,
+
+For those who hadn't noticed what I commented on the previous [article about rate limits](/rate-limits), here it is:
+
+> Removed this rate limit, in favor of active monitoring of traffic to automatically temp-ban IPs that crosses certain uncommon thresholds.  
+> This method should no longer interfere with regular users, but may or may not start temp-banning bots and/or scanners.  
+> I may consider lowering the thresholds if server still can't manage during peak hours.  
+> Source: http://disq.us/p/28djfvb
+
+So well, I didn't mention the thresholds awhile back, so here they are in no particular order:
+
+- Max. 32 concurrent connnections to `i.fiery.me/*`.
+- No concurrent connection limits to `i.fiery.me/thumbs/*`.
+- Temp-ban IP for 60 mins if it has surpassed the concurrent connection limits 30 times in a day.  
+This counts all subsequent connections after the 32nd connection if all were done at once (i.e. making 62 concurrent connections will immediately result in a temp-ban, because those are already 30 over the 32 limit).
+
+The following also applies to the whole `*.fiery.me` network:
+
+- Temp-ban IP for 24 hours if it has tried accessing missing files (404) 50 times in a day.  
+This is mainly aimed at scanners. Don't waste your time fellas.
+- Temp-ban IP for 24 hours if it has caused [nginx to say "no"](https://httpstatusdogs.com/444-no-response) 5 times in a day.  
+So tread carefully fellas..
+- *There are also a few other security-related thresholds, but you won't have to deal with any of those as long as you remain a good person.*
+
+I may reconsider these thresholds on the future.
+
+That's all. See ya fellas.

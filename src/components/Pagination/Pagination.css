@@ -5,13 +5,12 @@
     margin: 4rem auto;
     font-family: "Open Sans", sans-serif;
     font-size: 1.3rem;
-    color: #9eabb3;
+    color: #eff0f1;
     text-align: center
 }
 
 .pagination a {
-    color: #bdc3c7;
-    -webkit-transition: all 0.2s ease;
+    color: #eff0f1;
     transition: all 0.2s ease
 }
 
@@ -27,10 +26,9 @@
     position: absolute;
     display: inline-block;
     padding: 0 15px;
-    border: #bdc3c7 1px solid;
+    border: #eff0f1 1px solid;
     text-decoration: none;
     border-radius: 4px;
-    -webkit-transition: border 0.3s ease;
     transition: border 0.3s ease
 }
 
@@ -44,8 +42,8 @@
 
 .older-posts:hover,
 .newer-posts:hover {
-    color: #898b8d;
-    border-color: #898b8d
+    color: #bdc3c7;
+    border-color: #bdc3c7
 }
 
 /* ==========================================================================

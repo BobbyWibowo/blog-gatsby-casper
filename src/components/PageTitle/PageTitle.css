@@ -5,11 +5,17 @@
     letter-spacing: -1px;
     font-weight: 700;
     font-family: "Open Sans", sans-serif;
-    color: #eff0f1
+    color: #232629;
+    text-shadow:
+        -1px -1px 0 #febabc,
+        1px -1px 0 #febabc,
+        -1px 1px 0 #febabc,
+        1px 1px 0 #febabc
 }
 
 .no-cover .page-title {
-    color: #eff0f1
+    color: #eff0f1;
+    text-shadow: none
 }
 
 /* Add subtle load-in animation for content on the home page */
@@ -49,13 +55,11 @@
 @-webkit-keyframes fade-in-down {
     0% {
         opacity: 0;
-        -webkit-transform: translateY(-10px);
         transform: translateY(-10px)
     }
 
     100% {
         opacity: 1;
-        -webkit-transform: translateY(0);
         transform: translateY(0)
     }
 }
@@ -63,13 +67,11 @@
 @keyframes fade-in-down {
     0% {
         opacity: 0;
-        -webkit-transform: translateY(-10px);
         transform: translateY(-10px)
     }
 
     100% {
         opacity: 1;
-        -webkit-transform: translateY(0);
         transform: translateY(0)
     }
 }

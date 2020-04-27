@@ -20,48 +20,20 @@
     margin-bottom: 0;
     text-align: left;
     overflow-y: auto;
-    -webkit-transition:
-        -webkit-transform 0.5s ease,
-        opacity 0.3s ease 0.7s;
-    -webkit-transition:
-        opacity 0.3s ease 0.7s,
-        -webkit-transform 0.5s ease;
-    transition:
-        opacity 0.3s ease 0.7s,
-        -webkit-transform 0.5s ease;
     transition:
         transform 0.5s ease,
-        opacity 0.3s ease 0.7s;
-    transition:
-        transform 0.5s ease,
-        opacity 0.3s ease 0.7s,
-        -webkit-transform 0.5s ease
+        opacity 0.3s ease 0.7s
 }
 
 .nav-closed .nav {
-    -webkit-transform: translate3d(97px, 0, 0);
     transform: translate3d(97px, 0, 0)
 }
 
 .nav-opened .nav {
     opacity: 1;
-    -webkit-transition:
-        -webkit-transform 0.3s ease,
-        opacity 0s ease 0s;
-    -webkit-transition:
-        opacity 0s ease 0s,
-        -webkit-transform 0.3s ease;
-    transition:
-        opacity 0s ease 0s,
-        -webkit-transform 0.3s ease;
     transition:
         transform 0.3s ease,
         opacity 0s ease 0s;
-    transition:
-        transform 0.3s ease,
-        opacity 0s ease 0s,
-        -webkit-transform 0.3s ease;
-    -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0)
 }
 
@@ -99,17 +71,14 @@
     height: 1px;
     background: rgb(150, 150, 150);
     top: 15px;
-    -webkit-transition: background 0.15s ease;
     transition: background 0.15s ease
 }
 
 .nav-close::before {
-    -webkit-transform: rotate(45deg);
     transform: rotate(45deg)
 }
 
 .nav-close::after {
-    -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg)
 }
 
@@ -183,7 +152,6 @@
 }
 
 .subscribe-button {
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     display: block;
     position: absolute;
@@ -201,7 +169,6 @@
     line-height: 35px;
     border-radius: 3px;
     background: #fff;
-    -webkit-transition: all ease 0.3s;
     transition: all ease 0.3s
 }
 

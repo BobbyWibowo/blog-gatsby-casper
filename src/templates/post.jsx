@@ -1,7 +1,7 @@
 import { graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import React from 'react'
-import Helmet from 'react-helmet'
+import { Helmet } from 'react-helmet'
 import SEO from '../components/SEO/SEO'
 import config from '../../data/SiteConfig'
 import MainHeader from '../components/MainHeader/MainHeader'

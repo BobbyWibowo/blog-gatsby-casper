@@ -1,19 +1,11 @@
 .read-next {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
     align-items: stretch;
     margin-top: 10rem
 }
 
 .read-next-story {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-flex: 1;
-    -ms-flex-positive: 1;
     flex-grow: 1;
     min-width: 50%;
     text-decoration: none;
@@ -34,13 +26,11 @@
     bottom: 0;
     left: 0;
     background: rgba(0, 0, 0, 0.7);
-    -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease
 }
 
 .read-next-story:hover::before {
     background: rgba(0, 0, 0, 0.8);
-    -webkit-transition: all 0.2s ease;
     transition: all 0.2s ease
 }
 
@@ -58,7 +48,6 @@
     color: rgba(255, 255, 255, 0.8);
     border: rgba(255, 255, 255, 0.5) 1px solid;
     border-radius: 4px;
-    -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease
 }
 
@@ -93,7 +82,6 @@
 .read-next-story:hover .post::before {
     color: #222;
     background: #bdc3c7;
-    -webkit-transition: all 0.2s ease;
     transition: all 0.2s ease
 }
 
@@ -108,7 +96,6 @@
 /* if there are two posts without covers, put a border between them */
 .read-next-story.no-cover + .read-next-story.no-cover {
     border-left: rgba(0, 0, 100, 0.04) 1px solid;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box
 }
 
@@ -127,9 +114,6 @@
 
 @media only screen and (max-width: 900px) {
     .read-next {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
         flex-direction: column;
         margin-top: 4rem
     }

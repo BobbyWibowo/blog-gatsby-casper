@@ -5,7 +5,7 @@
     max-width: 710px;
     margin: 4rem auto;
     padding-bottom: 4rem;
-    border-bottom: #bdc3c7 1px solid;
+    border-bottom: #eff0f1 1px solid;
     word-wrap: break-word
 }
 
@@ -21,7 +21,7 @@
     bottom: -5px;
     left: 50%;
     margin-left: -5px;
-    background: #bdc3c7;
+    background: #eff0f1;
     border-radius: 100%
 }
 
@@ -59,9 +59,10 @@ div.page-template .post-title {
     font-family: "Open Sans", sans-serif;
     font-size: 1.5rem;
     line-height: 2.2rem;
-    color: #bdc3c7
+    color: #eff0f1
 }
 
+/*
 .post-meta a {
     color: #bdc3c7;
     text-decoration: none
@@ -71,6 +72,7 @@ div.page-template .post-title {
     color: #bdc3c7;
     text-decoration: underline
 }
+*/
 
 .post-template .post-meta,
 .page-template .post-meta {

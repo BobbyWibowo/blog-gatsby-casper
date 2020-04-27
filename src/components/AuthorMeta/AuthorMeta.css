@@ -6,9 +6,10 @@
     font-size: 1.4rem;
     line-height: 1;
     font-style: italic;
-    color: #bdc3c7
+    color: #eff0f1
 }
 
+/*
 .author-meta a {
     color: #bdc3c7;
     text-decoration: none
@@ -17,6 +18,7 @@
 .author-meta a:hover {
     color: #eff0f1
 }
+*/
 
 /* Location, website, and link */
 .author-profile .author-meta {

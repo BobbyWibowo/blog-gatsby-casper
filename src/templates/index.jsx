@@ -1,6 +1,6 @@
 import { graphql } from 'gatsby'
 import React from 'react'
-import Helmet from 'react-helmet'
+import { Helmet } from 'react-helmet'
 import { Link } from 'react-scroll'
 import PostListing from '../components/PostListing/PostListing'
 import SEO from '../components/SEO/SEO'

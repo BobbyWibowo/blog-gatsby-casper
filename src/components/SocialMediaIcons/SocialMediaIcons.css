@@ -5,16 +5,9 @@
 
 .social-media-icons .social-svg {
     text-align: center;
-    -webkit-transition-duration: 0.1s;
     transition-duration: 0.1s;
-    -webkit-transition-timing-function: ease-in-out;
     transition-timing-function: ease-in-out;
-    -webkit-transition-property: color, background-color;
-    transition-property: color, background-color
-}
-
-.social-media-icons .social-svg:hover {
-    background-color: #eff0f1
+    transition-property: color, background-color, border-color
 }
 
 .social-media-icon {
@@ -33,28 +26,47 @@
 }
 
 .main-header .social-media-icon .social-svg {
-    color: #eff0f1
+    color: #232629;
+    border: 1px solid #febabc;
+    box-sizing: border-box
 }
 
 .main-header .social-media-icon .social-svg:hover {
     color: #232629;
-    background-color: #eff0f1
+    border-color: #232629
 }
 
 .main-header .social-media-icon[href*="github.com"] .social-svg:hover {
-    color: #4183c4
+    color: #4183c4;
+    border-color: #4183c4
 }
 
 .main-header .social-media-icon[href*="twitter.com"] .social-svg:hover {
-    color: #00aced
+    color: #00aced;
+    border-color: #00aced
 }
 
 .main-header .social-media-icon[href*="reddit.com"] .social-svg:hover {
-    color: #ff4500
+    color: #ff4500;
+    border-color: #ff4500
+}
+
+.main-header .social-media-icon[href*="spotify.com"] .social-svg:hover {
+    color: #2ebd59;
+    border-color: #2ebd59
 }
 
 .main-header .social-media-icon[href*="mailto:"] .social-svg:hover {
-    color: #7f7f7f
+    color: #7f7f7f;
+    border-color: #7f7f7f
+}
+
+.main-header .social-media-icons .social-svg .social-svg-icon {
+    fill: #febabc !important
+}
+
+.main-header .social-media-icons .social-svg:hover .social-svg-icon {
+    fill: #232629 !important
 }
 
 /* ==========================================================================
