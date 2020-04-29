@@ -23,6 +23,7 @@ function GetNavList (config) {
       })
     })
 
+  /*
   NavList.push({ divider: true })
 
   NavList.push({
@@ -30,6 +31,7 @@ function GetNavList (config) {
     component: Link,
     to: '/about/'
   })
+  */
   return NavList
 }
 export default GetNavList

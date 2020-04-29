@@ -10,7 +10,7 @@ module.exports = {
   pathPrefix: '', // Prefixes all links. For cases when deployed to example.github.io/gatsby-starter-casper/.
   siteDescription: '', // Website description used for RSS feeds/meta description tag.
   siteCover: '/images/75863283_p0-compressor.jpg', // Optional, the cover image used in header for home page. e.g: "/images/blog-cover.jpg",
-  siteNavigation: false, // If navigation is enabled the Menu button will be visible
+  siteNavigation: true, // If navigation is enabled the Menu button will be visible
   siteRss: '/rss.xml', // Path to the RSS file.
   siteRssAuthor: 'Bobby Wibowo', // The author name used in the RSS file
   sitePaginationLimit: 10, // The max number of posts per page.
@@ -31,7 +31,20 @@ module.exports = {
   ],
   postDefaultCategoryID: 'n/a', // Default category for posts (unused).
   // Links to social profiles/projects you want to display in the navigation bar (unused).
-  userLinks: [],
+  userLinks: [
+    {
+      label: 'Portal',
+      url: 'https://fiery.me'
+    },
+    {
+      label: 'Safe',
+      url: 'https://safe.fiery.me'
+    },
+    {
+      label: 'Paste',
+      url: 'https://paste.fiery.me'
+    }
+  ],
   // Copyright string for the footer of the website and RSS feed.
   copyright: {
     label: 'Bobby Wibowo', // Label used before the year

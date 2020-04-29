@@ -117,8 +117,7 @@
     display: block;
     padding: 0.6rem 4%;
     overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis
+    white-space: nowrap
 }
 
 .nav li a::after {
