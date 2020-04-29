@@ -38,7 +38,7 @@ module.exports = {
     year: '2018-2020', // optional, defaults to current year
     url: 'https://fiery.me/' // optional, set link address of copyright, defaults to site root
   },
-  themeColor: '#4285f4', // Used for setting manifest and progress theme colors.
-  backgroundColor: '#303030', // Used for setting manifest background color.
+  themeColor: '#209cee', // Used for setting manifest and progress theme colors.
+  backgroundColor: '#000', // Used for setting manifest background color.
   promoteGatsby: true // Enables the GatsbyJS promotion information in footer.
 }
