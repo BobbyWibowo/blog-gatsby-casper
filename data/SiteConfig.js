@@ -13,7 +13,7 @@ module.exports = {
   siteNavigation: true, // If navigation is enabled the Menu button will be visible
   siteRss: '/rss.xml', // Path to the RSS file.
   siteRssAuthor: 'Bobby Wibowo', // The author name used in the RSS file
-  sitePaginationLimit: 10, // The max number of posts per page.
+  sitePaginationLimit: 5, // The max number of posts per page.
   disqusShortname: 'fiery', // enables Disqus comments, visually deviates from original Casper theme.
   siteSocialUrls: [
     {
