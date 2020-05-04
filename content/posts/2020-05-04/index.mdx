@@ -1,0 +1,32 @@
+---
+title: "Recent slow loading"
+cover: "https://picsum.photos/1280/300/?random&_=34"
+author: "bobby"
+date: "2020-05-04 10:51:00"
+category: "n/a"
+tags:
+    - General
+    - Safe
+---
+
+In short, it was due to another abuser using the safe to host full-length anime episodes and tv shows.
+
+This time the files appeared to be hosted in a popular site or something, as it easily brought the safe to over 17k requests in 30 minutes (and it lasted for a couple hours), and network output capping at 265Mbps.
+
+For the curious, that was roughly 4 times our average traffic (both in terms of requests ant network output).
+
+Main reason of the overload was network bottleneck. CPU, memory, and whatever other nonsense weren't really being burdened that much. It just couldn't allocate enough network *speed* for everyone else.
+
+With that said, I've banned the user and deleted all of their files (cause as I've repeatedly mentioned, [full-length anime epidoes or tv shows are no-no](/test-some-embeds)). In total they were 170 files at around 45 GiB.
+
+Check out the [takedown logs](/takedown-logs) for specific file names.
+
+---
+
+Other than that, I've also installed [GoAccess](https://goaccess.io/) to better analyze my server's logs from now on.
+
+With it I could finally analyze which files are using the most bandwidth and whatever other nonsense, and it works from the terminal (pretty HTML dashboard is a bonus).
+
+I previously merely used [Nginx Amplify](https://amplify.nginx.com/docs/guide-introduction.html) for overall analytics, but it couldn't really tell me which files were using the most bandwidth and all that jazz. Still, it was pretty good.
+
+Anyway, that's all. See ya folks. And really, just pay for your own video hosting.
