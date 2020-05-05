@@ -2,7 +2,7 @@
 title: "Update about *.will-always-want.me"
 cover: "https://picsum.photos/1280/300/?random&_=35"
 author: "bobby"
-date: "2020-05-05 15:54:00"
+date: "2020-05-05 16:30:00"
 category: "n/a"
 tags:
     - General
@@ -14,13 +14,25 @@ In short, the domain now uses wildcard subdomain, which means you can use ANY su
 Just keep in mind these rules:
 
 - `will.always.want.me` redirects to `safe.fiery.me`
-- `*will-always-want.me/*` redirects to `i.fiery.me/*`
+- `*will-always-want.me/**/*` redirects to `i.fiery.me/$3` 
+- `*will-always-want.me/*` redirects to `i.fiery.me/$2`
 
 For the first rule, notice the lack of wildcard symbols?
 
 Yes, that means `will-always-want.me/abc.jpg` actually redirects to `i.fiery.me/abc.jpg` instead!
 
-The only thing that redirects to `safe.fiery.me` is `will-always-want.me` with neither subdomain nor paths!
+For the second rule, the double asterisks mean they accept any amount of sub-directories in between.
+
+Take the following examples:
+
+- `subdomain.will-always-want.me/dir1/dir2/dir3/abc.jpg`
+- `subdomain.will-always-want.me/dir1/abc.jpg`
+
+Both of those actually redirect to `i.fiery.me/abc.jpg`!
+
+As for the third rule, that is the very basic `subdomain.will-always-want.me/abc.jpg` redirecting to `i.fiery.me/abc.jpg`.
+
+In conclusion, the only thing that redirects to `safe.fiery.me` instead is `will-always-want.me` that has neither subdomain nor paths
 
 If at this point you still don't know what this domain is all about, check out these previous articles:
 
