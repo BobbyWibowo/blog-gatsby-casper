@@ -1,0 +1,19 @@
+---
+title: "Recent disturbance with temporary uploads"
+cover: "https://picsum.photos/1280/300/?random&_=37"
+author: "bobby"
+date: "2020-05-16 21:55:00"
+category: "n/a"
+tags:
+    - Safe
+---
+
+It seems since somewhen around 10 May, temporary uploads weren't being automatically deleted due to some errors.
+
+Errors log told me it was due to the database being locked/busy, though I'm not sure why it just stopped trying for the next few days after that.
+
+I'm still looking into this, but for now I've restarted the service, and increased the check interval to reduce the possibility of more locked databases (now it will check every 2.5 minutes).
+
+With that said, all expired uploads that hadn't been deleted in the past few days should be properly deleted now.
+
+Sorry for the confusions caused, if any!
