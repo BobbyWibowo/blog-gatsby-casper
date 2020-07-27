@@ -38,10 +38,12 @@ function parsePost (post, slug) {
   return result
 }
 
+const getCover = diff => (config.postDefaultCoverUrl + diff.replace(/\//g, '_'))
+
 const formatReadNext = value => ({
   path: value.fields.slug,
   title: value.frontmatter.title,
-  cover: value.frontmatter.cover,
+  cover: getCover(value.fields.slug),
   excerpt: value.excerpt
 })
 
@@ -76,7 +78,7 @@ class PostTemplate extends React.Component {
     const { slug, next, prev } = this.props.pageContext
     const postNode = this.props.data.mdx
     const post = parsePost(postNode.frontmatter, slug)
-    const { cover, title, date, author, tags } = post
+    const { title, date, author, tags } = post
     const className = post.post_class ? post.post_class : 'post'
     const authorData = AuthorModel.getAuthor(
       this.props.data.authors.edges,
@@ -85,6 +87,8 @@ class PostTemplate extends React.Component {
     )
     const getNextData = () => (next ? formatReadNext(data.next) : null)
     const getPrevData = () => (prev ? formatReadNext(data.prev) : null)
+
+    const cover = post.cover || getCover(slug)
 
     return (
       <Layout location={this.props.location}>

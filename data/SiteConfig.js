@@ -10,9 +10,11 @@ module.exports = {
   pathPrefix: '', // Prefixes all links. For cases when deployed to example.github.io/gatsby-starter-casper/.
   siteDescription: '', // Website description used for RSS feeds/meta description tag.
   siteCover: '/images/75863283_p0-compressor.jpg', // Optional, the cover image used in header for home page. e.g: "/images/blog-cover.jpg",
-  siteNavigation: true, // If navigation is enabled the Menu button will be visible
+  siteNavigation: true, // If navigation is enabled the Menu button will be visible.
   siteRss: '/rss.xml', // Path to the RSS file.
-  siteRssAuthor: 'Bobby Wibowo', // The author name used in the RSS file
+  siteRssAuthor: 'Bobby Wibowo', // The author name used in the RSS file.
+  siteRssNewsfeed: '/rss-newsfeed.xml', // Path to the "newsfeed" RSS file.
+  siteRssNewsfeedPosts: 5, // Amount of posts to be queried for the "newsfeed" RSS file.
   sitePaginationLimit: 10, // The max number of posts per page.
   disqusShortname: 'fiery', // enables Disqus comments, visually deviates from original Casper theme.
   siteSocialUrls: [
@@ -30,6 +32,7 @@ module.exports = {
     }
   ],
   postDefaultCategoryID: 'n/a', // Default category for posts (unused).
+  postDefaultCoverUrl: 'https://picsum.photos/1280/300/?random&_=',
   // Links to social profiles/projects you want to display in the navigation bar (unused).
   userLinks: [
     {

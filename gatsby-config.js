@@ -46,31 +46,6 @@ module.exports = {
               noIframeBorder: true
             }
           },
-          /* bugged with mdx: https://github.com/raae/gatsby-remark-oembed/issues/66
-          {
-            resolve: '@raae/gatsby-remark-oembed',
-            options: {
-              usePrefix: true,
-              providers: {
-                include: [
-                  'CodePen',
-                  'Twitch',
-                  'Twitter',
-                  'SoundCloud'
-                ],
-                settings: {
-                  Twitter: {
-                    theme: 'dark',
-                    linkColor: '#3794d2',
-                    width: 550,
-                    align: 'center',
-                    dnt: true
-                  }
-                }
-              }
-            }
-          },
-          */
           'gatsby-remark-responsive-iframe',
           {
             resolve: 'gatsby-remark-external-links',
@@ -157,66 +132,107 @@ module.exports = {
           return ret
         },
         query: `
-        {
-          site {
-            siteMetadata {
-              rssMetadata {
-                site_url
-                feed_url
-                title
-                description
-                image_url
-                author
-                copyright
+          {
+            site {
+              siteMetadata {
+                rssMetadata {
+                  site_url
+                  feed_url
+                  title
+                  description
+                  image_url
+                  author
+                  copyright
+                }
               }
             }
           }
-        }
-      `,
-        feeds: [{
-          serialize (ctx) {
-            const rssMetadata = ctx.query.site.siteMetadata.rssMetadata
-            return ctx.query.allMdx.edges.map(edge => ({
-              categories: edge.node.frontmatter.tags,
-              date: edge.node.frontmatter.date,
-              title: edge.node.frontmatter.title,
-              description: edge.node.excerpt,
-              author: rssMetadata.author,
-              url: rssMetadata.site_url + edge.node.fields.slug,
-              guid: rssMetadata.site_url + edge.node.fields.slug,
-              custom_elements: [{
-                'content:encoded': edge.node.html
-              }]
-            }))
-          },
-          query: `
-            {
-              allMdx(
-                limit: 1000,
-                sort: { order: DESC, fields: [frontmatter___date] },
-              ) {
-                edges {
-                  node {
-                    excerpt
-                    html
-                    timeToRead
-                    fields { slug }
-                    frontmatter {
-                      title
-                      cover
-                      date
-                      category
-                      tags
-                      author
+        `,
+        feeds: [
+          {
+            serialize (ctx) {
+              const rssMetadata = ctx.query.site.siteMetadata.rssMetadata
+              return ctx.query.allMdx.edges.map(edge => ({
+                categories: edge.node.frontmatter.tags,
+                date: edge.node.frontmatter.date,
+                title: edge.node.frontmatter.title,
+                description: edge.node.excerpt,
+                author: rssMetadata.author,
+                url: rssMetadata.site_url + edge.node.fields.slug,
+                guid: rssMetadata.site_url + edge.node.fields.slug,
+                custom_elements: [{
+                  'content:encoded': edge.node.html
+                }]
+              }))
+            },
+            query: `
+              {
+                allMdx(
+                  limit: 1000,
+                  sort: { order: DESC, fields: [frontmatter___date] },
+                ) {
+                  edges {
+                    node {
+                      excerpt
+                      html
+                      fields { slug }
+                      frontmatter {
+                        title
+                        cover
+                        date
+                        category
+                        tags
+                        author
+                      }
                     }
                   }
                 }
               }
-            }
-          `,
-          output: config.siteRss,
-          title: config.siteTitleAlt
-        }]
+            `,
+            output: config.siteRss,
+            title: config.siteTitleAlt
+          },
+          // "Newsfeed" RSS feed. For polling by clients of safe.fiery.me, cause less posts = smaller size.
+          {
+            serialize (ctx) {
+              const rssMetadata = ctx.query.site.siteMetadata.rssMetadata
+              return ctx.query.allMdx.edges.map(edge => ({
+                categories: edge.node.frontmatter.tags,
+                date: edge.node.frontmatter.date,
+                title: edge.node.frontmatter.title,
+                description: edge.node.excerpt,
+                author: rssMetadata.author,
+                url: rssMetadata.site_url + edge.node.fields.slug,
+                guid: rssMetadata.site_url + edge.node.fields.slug
+              }))
+            },
+            query: `
+              {
+                allMdx(
+                  limit: ${config.siteRssNewsfeedPosts},
+                  sort: { order: DESC, fields: [frontmatter___date] },
+                ) {
+                  edges {
+                    node {
+                      excerpt
+                      fields { slug }
+                      frontmatter {
+                        title
+                        cover
+                        date
+                        category
+                        tags
+                        author
+                      }
+                    }
+                  }
+                }
+              }
+            `,
+            output: config.siteRssNewsfeed,
+            title: config.siteTitleAlt
+          }
+        ]
       }
     }
   ]
