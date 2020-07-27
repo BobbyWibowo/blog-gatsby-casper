@@ -2,6 +2,12 @@ const config = require('./data/SiteConfig')
 
 const pathPrefix = config.pathPrefix === '/' ? '' : config.pathPrefix
 
+const netlifyHeaders = {}
+if (config.siteRssNewsfeed)
+  netlifyHeaders[config.siteRssNewsfeed] = [
+    'Access-Control-Allow-Origin: *'
+  ]
+
 module.exports = {
   pathPrefix: config.pathPrefix,
   siteMetadata: {
@@ -120,7 +126,12 @@ module.exports = {
         ]
       }
     },
-    'gatsby-plugin-netlify',
+    {
+      resolve: 'gatsby-plugin-netlify',
+      options: {
+        headers: netlifyHeaders
+      }
+    },
     'gatsby-plugin-offline',
     {
       resolve: 'gatsby-plugin-feed',
