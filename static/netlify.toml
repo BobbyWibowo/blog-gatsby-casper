@@ -1,0 +1,4 @@
+[[headers]]
+  for = "/rss-newsfeed.xml"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
