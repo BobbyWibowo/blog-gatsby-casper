@@ -3,8 +3,8 @@
   "description": "Bobby's personal blog using a Gatsby starter pack that was based on the Casper theme from Ghost.",
   "version": "2.0.0",
   "dependencies": {
-    "@mdx-js/mdx": "^1.6.14",
-    "@mdx-js/react": "^1.6.14",
+    "@mdx-js/mdx": "^1.6.18",
+    "@mdx-js/react": "^1.6.18",
     "babel-eslint": "^10.1.0",
     "classnames": "^2.2.6",
     "gatsby": "^2.24.11",
