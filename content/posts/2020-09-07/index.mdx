@@ -2,11 +2,13 @@
 title: "*.will-always-want.me will shutdown in 25 Sept 2020 + replacement domain"
 cover: ""
 author: "bobby"
-date: "2020-09-07 16:24:00" # 2020-09-07 23:24:00 +0700
+date: "2020-10-06 06:59:00" # 2020-10-06 13:59:00 +0700
 category: "n/a"
 tags:
     - Safe
 ---
+
+*Edited post. This was originally posted at 07/09/2020.*
 
 Hey there, just a quick notice that `*.will-always-want.me` domain will shutdown in 25 September 2020.
 
@@ -17,9 +19,11 @@ As a replacement, I've rented a new domain name named `lolis.cyou`, as the cost 
 Same redirect rules as the previous domain, which are the following with the new domain:
 
 - `lolis.cyou` redirects to `safe.fiery.me`
-- `*lolis.cyou/**/*` redirects to `i.fiery.me/$3` 
-- `*lolis.cyou/*` redirects to `i.fiery.me/$2`
+- `*.lolis.cyou/**/*` redirects to `i.fiery.me/$3` 
+- `*.lolis.cyou/*` redirects to `i.fiery.me/$2`
 
 I'm thinking of something like `dont-let-the.lolis.cyou/with-your-pants-off/abcde.png`..
 
 Yeah, I can't think of anything better. But you can do whatever you want really, so go wild.
+
+Additional note about wildcard subdomain: It only allows 1-level wildcard. Meaning something like `sub-a.sub-b.lolis.cyou` is not possible. It's mostly a limitation with the SSL certificate not allowing multi-level wildcards. Otherwise they work just fine with HTTP.
