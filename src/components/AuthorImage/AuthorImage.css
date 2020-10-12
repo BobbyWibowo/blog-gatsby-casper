@@ -9,8 +9,8 @@
     height: 80px;
     border-radius: 100%;
     overflow: hidden;
-    padding: 6px;
-    background: #fff;
+    background: transparent;
+    border: 6px solid #fff;
     z-index: 2;
     box-shadow: 0 20px 60px #0a0a0a0d, 0 5px 10px #0a0a0a1a, 0 1px 1px #0a0a0a33
 }
@@ -31,9 +31,8 @@
     top: auto;
     width: 120px;
     height: 120px;
-    padding: 3px;
     margin: 0 auto;
-    box-shadow: none
+    box-shadow: none;
 }
 
 /* ==========================================================================

@@ -14,15 +14,16 @@
 .post::after {
     display: block;
     content: "";
-    width: 7px;
-    height: 7px;
-    border: #232629 1px solid;
+    width: 5px;
+    height: 5px;
+    border: #000 2px solid;
     position: absolute;
     bottom: -5px;
     left: 50%;
     margin-left: -5px;
     background: #eff0f1;
-    border-radius: 100%
+    border-radius: 100%;
+    box-shadow: #eff0f1 0 0 0 2px;
 }
 
 .post-title a {

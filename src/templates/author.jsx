@@ -140,7 +140,7 @@ export const pageQuery = graphql`
         node {
           uid
           name
-          thumb114
+          image
           url
           bio
           location

@@ -8,16 +8,16 @@
 .author-profile::after {
     display: block;
     content: "";
-    width: 7px;
-    height: 7px;
-    border: #e7eef2 1px solid;
+    width: 6px;
+    height: 6px;
+    border: #000 3px solid;
     position: absolute;
     bottom: -5px;
     left: 50%;
     margin-left: -5px;
-    background: #fff;
+    background: #eff0f1;
     border-radius: 100%;
-    box-shadow: #fff 0 0 0 5px
+    box-shadow: #eff0f1 0 0 0 3px;
 }
 
 /* ==========================================================================

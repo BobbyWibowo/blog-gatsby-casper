@@ -9,7 +9,8 @@
     width: 140px
 }
 
-.post-footer .share .SocialMediaShareButton {
+.post-footer .share .react-share__ShareButton {
+    min-height: 0;
     cursor: pointer;
     margin: 0.8rem
 }
