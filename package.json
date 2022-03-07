@@ -34,7 +34,7 @@
     "lodash": "^4.17.20",
     "moment": "^2.29.1",
     "postcss-preset-env": "^6.7.0",
-    "prismjs": "^1.22.0",
+    "prismjs": "^1.27.0",
     "react": "^16.13.1",
     "react-disqus-comments": "^1.4.0",
     "react-dom": "^16.13.1",
