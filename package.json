@@ -59,7 +59,7 @@
     "postcss-cli": "^7.1.2",
     "remark-cli": "^8.0.1",
     "remark-preset-lint-recommended": "^4.0.1",
-    "standard-version": "^8.0.2",
+    "standard-version": "^9.5.0",
     "stylefmt": "^6.0.3",
     "stylelint": "^13.7.2",
     "stylelint-config-standard": "^20.0.0",
