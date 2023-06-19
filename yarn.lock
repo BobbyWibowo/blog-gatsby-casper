@@ -7677,14 +7677,14 @@ gatsby-remark-copy-linked-files@^2.3.19:
     probe-image-size "^5.0.0"
     unist-util-visit "^1.4.1"
 
-gatsby-remark-embed-video@^3.0.10:
-  version "3.0.10"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-embed-video/-/gatsby-remark-embed-video-3.0.10.tgz#2813199338d27e731783a6f8663477f877e72b73"
-  integrity sha512-3dQgw0g3nndspiXkz7pKOXZs67I1Cz/sefyjXQ2bq6gtdX3qBdBurMuAeIlk0TgueMJCbR8SyFjMyVdI0LAJDg==
+gatsby-remark-embed-video@^3.2.1:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-embed-video/-/gatsby-remark-embed-video-3.2.1.tgz#167782a862f99c8d2f0ae988d5519466e75f9829"
+  integrity sha512-VVrcoNcLtWH4Ffqs2Qc2me9Ph+p8iXi9kMbX1OLFLY3JMtk5+lIOUGs0CutWsWKndj2W6PpfkwdFZyuknL5kjQ==
   dependencies:
-    get-video-id "^3.1.4"
+    get-video-id "^3.6.4"
     remark-burger "^1.0.1"
-    unist-util-visit "^2.0.2"
+    unist-util-visit "^2.0.3"
 
 gatsby-remark-external-links@^0.0.4:
   version "0.0.4"
@@ -8020,11 +8020,6 @@ get-proxy@^2.0.0:
   dependencies:
     npm-conf "^1.1.0"
 
-get-src@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/get-src/-/get-src-1.0.1.tgz#ca11dbe4a93c7f3aa85cec95fcb0b2dfaa9539ee"
-  integrity sha1-yhHb5Kk8fzqoXOyV/LCy36qVOe4=
-
 get-stdin@^4.0.1:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/get-stdin/-/get-stdin-4.0.1.tgz#b968c6b0a04384324902e8bf1a5df32579a450fe"
@@ -8072,12 +8067,10 @@ get-value@^2.0.3, get-value@^2.0.6:
   resolved "https://registry.yarnpkg.com/get-value/-/get-value-2.0.6.tgz#dc15ca1c672387ca76bd37ac0a395ba2042a2c28"
   integrity sha1-3BXKHGcjh8p2vTesCjlbogQqLCg=
 
-get-video-id@^3.1.4:
-  version "3.1.4"
-  resolved "https://registry.yarnpkg.com/get-video-id/-/get-video-id-3.1.4.tgz#9bffb8b607aa0379f0f8a927eae7df13b5e414a3"
-  integrity sha512-XOZ60NZ60ozTtoWtPPpA3TC9JgDXgcd5nTfYwjBhZWAx3w48HRq6EqKp2bUJ/3F+BWgiMMHg4IkQ+acO6LxfMQ==
-  dependencies:
-    get-src "^1.0.1"
+get-video-id@^3.6.4:
+  version "3.6.5"
+  resolved "https://registry.yarnpkg.com/get-video-id/-/get-video-id-3.6.5.tgz#a7bfa1e8602557f2fcbed164d7005fdaa352d572"
+  integrity sha512-9RPHSQANIeGW5rU3CjWdm1zi+wUHbBWX+m4m+dqQAavrZ9p1P1J7AbxGvVEEHRyGfGrmMf5PqiRWYMyfqM+QYA==
 
 getopts@^2.1.1:
   version "2.2.5"
@@ -17700,7 +17693,7 @@ unist-util-visit-parents@^3.0.0:
     "@types/unist" "^2.0.0"
     unist-util-is "^4.0.0"
 
-unist-util-visit@2.0.3, unist-util-visit@^2.0.0, unist-util-visit@^2.0.2:
+unist-util-visit@2.0.3, unist-util-visit@^2.0.0, unist-util-visit@^2.0.2, unist-util-visit@^2.0.3:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/unist-util-visit/-/unist-util-visit-2.0.3.tgz#c3703893146df47203bb8a9795af47d7b971208c"
   integrity sha512-iJ4/RczbJMkD0712mGktuGpm/U4By4FfDonL7N/9tATGIF4imikjOuagyMY53tnZq3NP6BcmlrHhEKAfGWjh7Q==
