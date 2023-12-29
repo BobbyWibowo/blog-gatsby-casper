@@ -6,7 +6,7 @@
     "@mdx-js/mdx": "^1.6.18",
     "@mdx-js/react": "^1.6.18",
     "babel-eslint": "^10.1.0",
-    "classnames": "^2.2.6",
+    "classnames": "^2.5.1",
     "gatsby": "^2.24.73",
     "gatsby-pagination": "^1.2.0",
     "gatsby-plugin-catch-links": "^2.3.15",
